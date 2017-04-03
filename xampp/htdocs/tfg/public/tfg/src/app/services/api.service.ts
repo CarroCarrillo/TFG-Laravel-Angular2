@@ -11,7 +11,7 @@ declare var sessionStorage: any;
 
 @Injectable()
 export class ApiService {
-    basepath = '/api/';
+    basepath = 'http://tfg.dev:8080/api/';
     version = 'v1';
     token: Token;
     user: User;
@@ -122,7 +122,7 @@ export class ApiService {
     }
 
     getLastImages(): Promise<any[]> {
-        return this.apiCall('GET', 'images')
+        return this.apiCall('GET', 'image')
             .then(res => {
                 return res.json() as any[];
             }).catch(error => {

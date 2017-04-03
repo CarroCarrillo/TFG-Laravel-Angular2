@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ApiService } from '../services/api.service';
+import { ApiService } from '../services/api.service';
 
 @Component({
     selector: 'index',
@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class IndexComponent implements OnInit {
-    constructor(/*private api: ApiService*/) { }
+    constructor(private api: ApiService) { }
 
     ngOnInit() { 
-        // this.api.getLastImages().then(res => {
-        //     console.log(res);
-        // });
+        this.api.getLastImages().then(res => {
+            console.log(res);
+        });
     }
 }

@@ -9,6 +9,8 @@ import { HeaderSimpleComponent } from './components/headers/header-simple.compon
 import { AppComponent } from './components/app.component';
 import { IndexComponent } from './components/index.component';
 
+import { ApiService } from './services/api.service';
+
 @NgModule({
   declarations: [
     HeaderSimpleComponent,
@@ -21,7 +23,9 @@ import { IndexComponent } from './components/index.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
