@@ -16,20 +16,21 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('subject');
-            $table->text('description');
-            $table->string('source');
-            $table->string('language');
-            $table->string('relation');
-            $table->string('coverge');
-            $table->string('creator');
-            $table->string('contributor');
-            $table->string('rights');
-            $table->date('date');
-            $table->string('type');
-            $table->string('format');
-            $table->string('identifier');
-            $table->string('hashedName');
+            $table->string('subject')->nullable();
+            $table->text('description')->nullable();
+            $table->string('source')->nullable();
+            $table->string('language')->nullable();
+            $table->string('relation')->nullable();
+            $table->string('coverage')->nullable();
+            $table->string('creator')->nullable();
+            $table->string('contributor')->nullable();
+            $table->string('publisher')->nullable();
+            $table->string('rights')->nullable();
+            $table->date('date')->nullable();
+            $table->string('type')->nullable();
+            $table->string('format')->nullable();
+            $table->string('identifier')->nullable();
+            $table->string('hashedName')->nullable();
             $table->timestamps();
         });
     }

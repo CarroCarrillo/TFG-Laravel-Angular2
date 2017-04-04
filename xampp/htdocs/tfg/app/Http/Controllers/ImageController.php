@@ -8,6 +8,24 @@ use App\Image;
 
 class ImageController extends Controller
 {
+
+     /**
+    * @api {get} /image Recupera la lista de imágenes
+    * @apiVersion 1.0.0
+    * @apiName GetImage
+    * @apiGroup Imagen
+    *
+    * @apiSuccess {Object[]} image Lista de imágenes.
+    * @apiSuccess {Number} user.id ID del usuario.
+    * @apiSuccess {String} user.name  Nombre del usuario.
+    * @apiSuccess {String} user.surname  Apellidos del usuario.
+    * @apiSuccess {String} user.username  Nombre de usuario del usuario.
+    * @apiSuccess {String} user.email  E-mail del usuario.
+    * @apiSuccess {Date} user.created_at  Fecha de registro del usuario.
+    * @apiSuccess {Date} user.updated_at  Fecha de última modificación del usuario.
+    * @apiSuccess {String} user.profile_image  Imagen de perfil del usuario.
+    */
+
     /**
      * Display a listing of the resource.
      *

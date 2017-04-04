@@ -5,6 +5,7 @@ import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Token } from '../models/token';
 import { User } from '../models/user';
+import { Image } from '../models/image';
 
 declare var localStorage: any;
 declare var sessionStorage: any;
@@ -121,10 +122,10 @@ export class ApiService {
             .toPromise();//.catch(error => this.errorHandler(error as Error));
     }
 
-    getLastImages(): Promise<any[]> {
+    getLastImages(): Promise<Image[]> {
         return this.apiCall('GET', 'image')
             .then(res => {
-                return res.json() as any[];
+                return res.json() as Image[];
             }).catch(error => {
                 this.handleError(error);
             });
