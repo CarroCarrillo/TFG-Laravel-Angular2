@@ -5,12 +5,19 @@ import { HeaderSimpleComponent } from './components/headers/header-simple.compon
 
 import { IndexComponent } from './components/index.component';
 
+import { PageNotFoundComponent } from './components/404.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio',  children: [
       { path: '', component: HeaderSimpleComponent, outlet: "header" },
       { path: '', component: IndexComponent }
-  ]}
+  ]},
+  { path: '404', children: [
+    { path: '', component: PageNotFoundComponent },
+    { path: '', component: HeaderSimpleComponent, outlet: "header" }
+  ]},
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

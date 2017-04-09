@@ -50,10 +50,10 @@ export class ApiService {
         sessionStorage.setItem('token', JSON.stringify(token));
         this.authHeader = this.token.token_type + ' ' + this.token.access_token;
         this.headers.append('Authorization', this.authHeader);
-        // this.getMe().then(result => {
-        //   this.changeLoggedIn(true);
-        //   this.changeUser(result);
-        // });
+        this.getMe().then(result => {
+            this.changeLoggedIn(true);
+            this.changeUser(result);
+        });
     }
 
     logout() {
@@ -120,6 +120,17 @@ export class ApiService {
             headers: this.headers
         })
             .toPromise();//.catch(error => this.errorHandler(error as Error));
+    }
+
+    getMe(): Promise<User> {
+        return this.apiCall('GET', 'me')
+            .then(res => {
+                return res.json() as User;
+            }).catch(error => {
+                this.token = null;
+                sessionStorage.removeItem('token');
+                this.headers.delete('Authorization');
+            });
     }
 
     getLastImages(): Promise<Image[]> {

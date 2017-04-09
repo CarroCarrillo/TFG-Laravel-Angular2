@@ -8,6 +8,7 @@ import { HeaderSimpleComponent } from './components/headers/header-simple.compon
 
 import { AppComponent } from './components/app.component';
 import { IndexComponent } from './components/index.component';
+import { PageNotFoundComponent } from './components/404.component';
 
 import { ApiService } from './services/api.service';
 
@@ -15,7 +16,8 @@ import { ApiService } from './services/api.service';
   declarations: [
     HeaderSimpleComponent,
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
