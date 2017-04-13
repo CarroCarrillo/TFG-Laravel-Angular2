@@ -12,8 +12,19 @@
     <div>
       <a class="mdl-navigation__link cursor_hand" (click)="openLogin()">Iniciar sesión</a>
     </div>
-    <div class="shortcut-menu"  [class.open]="open">
-      Caspa
+    {{open}}
+    <div class="triangle" [class.open]="open"></div>
+    <div id="login-menu"  [class.open]="open">
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="usernameLogin" autofocus>
+          <label class="mdl-textfield__label" for="usernameLogin">Nombre de usuario</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="password" id="passwordLogin">
+          <label class="mdl-textfield__label" for="passwordLogin">Contraseña</label>
+        </div>
+      </form>
     </div>
   </nav>
 </div>

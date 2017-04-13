@@ -1,7 +1,38 @@
-.shortcut-menu{
+#login-menu{
     display: none;
+    position: absolute;
+    top: 56px;
+    right: 85px;
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+}
+
+#login-menu > form div{
+    width: 100%;
+}
+
+.triangle{
+    display: none;
+    position: absolute;
+    right: 93px;
+    z-index: 1;
+    top: 45px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent #ffffff transparent;
 }
 
 .open{
-    display: block;
+    display: block !important;
+}
+
+.cursor_hand{
+    cursor: pointer;
 }
