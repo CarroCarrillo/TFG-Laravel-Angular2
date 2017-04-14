@@ -7,26 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderSimpleComponent implements OnInit {
-    open: boolean;
+    open: boolean = false;
 
-    constructor() {
-        document.onclick = (e) => {
-            console.log(this.open);
-            console.log("Debería hacer algo");
-            if (e.target == document.getElementById('login-menu') || !this.isChildOf(e.target, document.getElementById('login-menu'))) {
-                this.open = false;
-                console.log("Debería cerrarse");
-            }
-            console.log(this.open);
-        }
-    }
+    constructor() { }
 
     ngOnInit() {
-        this.open = false;
+        window.addEventListener('click', e => {
+            if (e.target != document.getElementById('login-menu') && e.target != document.getElementById('login-link')
+            && !this.isChildOf(e.target, document.getElementById('login-menu'))) {
+                this.open = false
+            }
+        });
     }
 
     openLogin() {
-        console.log(this.open);
         this.open = true;
     }
 
