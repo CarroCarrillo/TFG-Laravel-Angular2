@@ -122,6 +122,17 @@ export class ApiService {
             .toPromise();//.catch(error => this.errorHandler(error as Error));
     }
 
+    getToken(username: string, password: string): Promise<any> {
+        return this.apiCall('POST', 'token', {
+            username: username,
+            password: password
+        }).then(res => {
+            let token = res.json() as Token;
+            this.setToken(token);
+            return token;
+        });
+    }
+
     getMe(): Promise<User> {
         return this.apiCall('GET', 'me')
             .then(res => {

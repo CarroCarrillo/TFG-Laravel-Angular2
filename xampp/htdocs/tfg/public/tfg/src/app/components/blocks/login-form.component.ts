@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'app/services/api.service';
+import { Router } from '@angular/router';
+import { Token } from '../../models/token';
 
 @Component({
     selector: 'login-form',
@@ -7,11 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LoginFormComponent implements OnInit {
-    constructor() { }
+    username: string;
+    password: string;
+
+    constructor(private api: ApiService, private router: Router) { }
 
     ngOnInit() { }
 
-    onSubmit(){
-        console.log("Enviar");
+    login() {
+        this.api.getToken(this.username, this.password).then(res => {
+            this.api.loggedInChanged$.subscribe(() => {
+                if (this.api.loggedin) {
+                   // Correcto inicio de sesión
+                   console.log(res);
+                }
+            });
+        })
     }
 }

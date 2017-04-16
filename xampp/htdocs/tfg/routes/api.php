@@ -15,6 +15,9 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'v1'], function () {
 
+    //INICIO DE SESIÓN
+    Route::post('token', 'LoginController@token');
+
     // USUARIOS
     Route::get('user', 'UserController@index');
     Route::get('user/{id}', 'UserController@show');

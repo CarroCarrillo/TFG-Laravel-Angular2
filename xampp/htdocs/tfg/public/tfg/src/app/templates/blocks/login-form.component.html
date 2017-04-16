@@ -1,10 +1,12 @@
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="login()">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
-        <input class="mdl-textfield__input" type="text" id="usernameLogin" autofocus required>
+        <input class="mdl-textfield__input" type="text" id="usernameLogin" [(ngModel)]="username"
+        name="usernameLogin" autofocus required>
         <label class="mdl-textfield__label" for="usernameLogin">Nombre de usuario</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
-        <input class="mdl-textfield__input" type="password" id="passwordLogin" required>
+        <input class="mdl-textfield__input" type="password" id="passwordLogin" [(ngModel)]="password" required
+        name="passwordLogin">
         <label class="mdl-textfield__label" for="passwordLogin">Contraseña</label>
     </div>
     <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect wide-button">
