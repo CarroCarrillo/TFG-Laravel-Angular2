@@ -17,7 +17,6 @@ export class IndexComponent implements OnInit {
         this.api.getLastImages().then(res => {
             if (res) {
                 this.lastImages = res;
-                console.log(this.lastImages);
             }
         });
     }

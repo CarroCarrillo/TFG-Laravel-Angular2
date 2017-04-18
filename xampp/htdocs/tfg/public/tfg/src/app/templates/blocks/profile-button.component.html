@@ -1,0 +1,26 @@
+<div class="shortcut-menu__button" [class.opened]="_open" (mouseenter)="onMouseEnterMenu($event)" (mouseleave)="onMouseLeaveMenu($event)">
+  <button id="navigation-profile-btn" class="mdl-button mdl-js-button mdl-button--icon" title="Ver mi perfil" [routerLink]="_user.url">
+    <i class="profile-button" [ngStyle]="{'background-image': 'url(' + _user.profile_image + ')'}">profile</i>
+  </button>
+</div>
+<div class="shortcut-menu" [class.opened]="_open" (mouseenter)="onMouseEnterMenu($event)" (mouseleave)="onMouseLeaveMenu($event)">
+  <div class="profile-summary">
+    <div class="profile-summary__image"  [routerLink]="_user.url">
+      <img [src]="_user.profile_image" alt="profile image">
+    </div>
+    <div class="profile-summary__info">
+      <div class="profile-summary__info-name">
+        {{ _user.name + " " + _user.surname }}
+      </div>
+      <div class="profile-summary__info-email">
+        {{ _user.email }}
+      </div>
+      <div class="profile-summary__info-username">
+        {{ _user.username }}
+      </div>
+    </div>
+  </div>
+  <div class="shortcut-menu__more" (click)="logout()" routerLink="/inicio">
+    Cerrar sesión
+  </div>
+</div>

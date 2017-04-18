@@ -16,7 +16,8 @@ class UsersTableSeeder extends Seeder
           'password' => bcrypt('admin'),
           'email' => 'admin@tfg.es',
           'name' => 'Admin',
-          'surname' => 'TFG'
+          'surname' => 'TFG',
+          'profile_image' => '/assets/admin/profile.png'
         ]);
     }
 }

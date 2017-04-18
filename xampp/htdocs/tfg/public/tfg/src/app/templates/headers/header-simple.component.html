@@ -6,6 +6,10 @@
   <!-- Navigation. We hide it in small screens. -->
   <nav class="mdl-navigation mdl-layout--large-screen-only" *ngIf="user != null">
     <a class="mdl-navigation__link" href="">Subir</a>
+
+    <div id="navigation-create-btn" class="mdl-navigation__link relative">
+      <profile-button></profile-button>
+    </div>
   </nav>
   <nav class="mdl-navigation mdl-layout--large-screen-only" *ngIf="user == null">
     <a class="mdl-navigation__link" routerLink="/signup">Registrarse</a>
@@ -13,7 +17,7 @@
       <a class="mdl-navigation__link cursor_hand" id="login-link" (click)="openLogin()">Iniciar sesión</a>
     </div>
     <div class="triangle" [class.open]="open"></div>
-    <div id="login-menu"  [class.open]="open">
+    <div id="login-menu" [class.open]="open">
       <login-form></login-form>
     </div>
   </nav>

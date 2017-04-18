@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user';
+import { ApiService } from '../../services/api.service';
+import { Subscription }   from 'rxjs/Subscription';
 
 @Component({
     selector: 'header-simple',
@@ -8,13 +11,20 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeaderSimpleComponent implements OnInit {
     open: boolean = false;
+    user: User;
+    userSubscription: Subscription;
 
-    constructor() { }
+    constructor(private api: ApiService) {
+        this.user = api.user;
+        this.userSubscription = api.userChanged$.subscribe(value => {
+            this.user = value;
+        });
+    }
 
     ngOnInit() {
         window.addEventListener('click', e => {
             if (e.target != document.getElementById('login-menu') && e.target != document.getElementById('login-link')
-            && !this.isChildOf(e.target, document.getElementById('login-menu'))) {
+                && !this.isChildOf(e.target, document.getElementById('login-menu'))) {
                 this.open = false
             }
         });
