@@ -4,6 +4,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HeaderSimpleComponent } from './components/headers/header-simple.component';
 
 import { IndexComponent } from './components/index.component';
+import { SignUpComponent } from './components/sign-up.component';
 
 import { PageNotFoundComponent } from './components/404.component';
 
@@ -12,6 +13,10 @@ const routes: Routes = [
   { path: 'inicio',  children: [
       { path: '', component: HeaderSimpleComponent, outlet: "header" },
       { path: '', component: IndexComponent }
+  ]},
+  { path: 'registro',  children: [
+      { path: '', component: HeaderSimpleComponent, outlet: "header" },
+      { path: '', component: SignUpComponent }
   ]},
   { path: '404', children: [
     { path: '', component: PageNotFoundComponent },

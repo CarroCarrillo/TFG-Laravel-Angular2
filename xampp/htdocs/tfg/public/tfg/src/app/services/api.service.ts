@@ -144,6 +144,18 @@ export class ApiService {
             });
     }
 
+    createUser(user, password_confirmation): Promise<User> {
+        return this.apiCall('POST', 'user', {
+            name: user.name,
+            surname: user.surname,
+            username: user.username,
+            email: user.email,
+            profile_image: user.profile_image,
+            password: user.password,
+            password_confirmation: password_confirmation,
+        });
+    }
+
     getLastImages(): Promise<Image[]> {
         return this.apiCall('GET', 'image')
             .then(res => {

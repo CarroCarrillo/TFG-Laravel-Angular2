@@ -9,6 +9,7 @@ import { HeaderSimpleComponent } from './components/headers/header-simple.compon
 import { AppComponent } from './components/app.component';
 import { IndexComponent } from './components/index.component';
 import { LoginFormComponent } from './components/blocks/login-form.component';
+import { SignUpComponent } from './components/sign-up.component';
 import { ProfileButtonComponent } from './components/blocks/profile-button.component';
 import { PageNotFoundComponent } from './components/404.component';
 
@@ -20,6 +21,7 @@ import { ApiService } from './services/api.service';
     AppComponent,
     IndexComponent,
     LoginFormComponent,
+    SignUpComponent,
     ProfileButtonComponent,
     PageNotFoundComponent
   ],
