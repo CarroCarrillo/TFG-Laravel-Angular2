@@ -11,9 +11,11 @@ import { IndexComponent } from './components/index.component';
 import { LoginFormComponent } from './components/blocks/login-form.component';
 import { SignUpComponent } from './components/sign-up.component';
 import { ProfileButtonComponent } from './components/blocks/profile-button.component';
+import { ImageDetailComponent } from './components/image-detail.component';
 import { PageNotFoundComponent } from './components/404.component';
 
 import { ApiService } from './services/api.service';
+import { ImageResolver } from './services/resolvers/image-resolver.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { ApiService } from './services/api.service';
     LoginFormComponent,
     SignUpComponent,
     ProfileButtonComponent,
+    ImageDetailComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -32,7 +35,8 @@ import { ApiService } from './services/api.service';
     AppRoutingModule
   ],
   providers: [
-    ApiService
+    ApiService,
+    ImageResolver
   ],
   bootstrap: [AppComponent]
 })

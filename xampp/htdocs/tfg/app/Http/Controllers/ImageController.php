@@ -16,14 +16,24 @@ class ImageController extends Controller
     * @apiGroup Imagen
     *
     * @apiSuccess {Object[]} image Lista de imágenes.
-    * @apiSuccess {Number} user.id ID del usuario.
-    * @apiSuccess {String} user.name  Nombre del usuario.
-    * @apiSuccess {String} user.surname  Apellidos del usuario.
-    * @apiSuccess {String} user.username  Nombre de usuario del usuario.
-    * @apiSuccess {String} user.email  E-mail del usuario.
-    * @apiSuccess {Date} user.created_at  Fecha de registro del usuario.
-    * @apiSuccess {Date} user.updated_at  Fecha de última modificación del usuario.
-    * @apiSuccess {String} user.profile_image  Imagen de perfil del usuario.
+    * @apiSuccess {Number} image.id ID de la imagen.
+    * @apiSuccess {String} image.title  Título de la imagen.
+    * @apiSuccess {String} image.description  Descripción de la imagen.
+    * @apiSuccess {String} image.source  Fuente de procedencia de la imagen.
+    * @apiSuccess {String} image.language  Idioma, si procede, de la imagen.
+    * @apiSuccess {String} image.relation  Referencia a un recurso relacionado con la imagen.
+    * @apiSuccess {String} image.coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiSuccess {String} image.creator  Creador, autor o usuario que subió la imagen.
+    * @apiSuccess {String} image.contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiSuccess {String} image.publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiSuccess {String} image.rights  Información sobre los derechos de la imagen.
+    * @apiSuccess {Date} image.date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiSuccess {String} image.type  La naturaleza o género del contenido de la imagen.
+    * @apiSuccess {String} image.format  La manifestación física o digital de la imagen.
+    * @apiSuccess {String} image.identifier  Una referencia no ambigua a una imagen dada.
+    * @apiSuccess {String} image.hashname  Nombre de referencia a la imagen dentro del sistema.
+    * @apiSuccess {Date} image.created_at  Fecha de creación o subida de la imagen.
+    * @apiSuccess {Date} image.updated_at  Fecha de última modificación del contenido de la imagen.
     */
 
     /**
@@ -56,6 +66,32 @@ class ImageController extends Controller
     {
         //
     }
+
+     /**
+    * @api {post} /image Almacena una nueva imagen
+    * @apiVersion 1.0.0
+    * @apiName PostImage
+    * @apiGroup Imagen
+    *
+    * @apiSuccess {Number} id ID de la imagen.
+    * @apiSuccess {String} title  Título de la imagen.
+    * @apiSuccess {String} description  Descripción de la imagen.
+    * @apiSuccess {String} source  Fuente de procedencia de la imagen.
+    * @apiSuccess {String} language  Idioma, si procede, de la imagen.
+    * @apiSuccess {String} relation  Referencia a un recurso relacionado con la imagen.
+    * @apiSuccess {String} coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiSuccess {String} creator  Creador, autor o usuario que subió la imagen.
+    * @apiSuccess {String} contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiSuccess {String} publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiSuccess {String} rights  Información sobre los derechos de la imagen.
+    * @apiSuccess {Date} date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiSuccess {String} type  La naturaleza o género del contenido de la imagen.
+    * @apiSuccess {String} format  La manifestación física o digital de la imagen.
+    * @apiSuccess {String} identifier  Una referencia no ambigua a una imagen dada.
+    * @apiSuccess {String} hashname  Nombre de referencia a la imagen dentro del sistema.
+    * @apiSuccess {Date} created_at  Fecha de creación o subida de la imagen.
+    * @apiSuccess {Date} updated_at  Fecha de última modificación del contenido de la imagen.
+    */
 
     /**
      * Store a newly created resource in storage.
@@ -108,6 +144,34 @@ class ImageController extends Controller
 
         return $image;
     }
+
+     /**
+    * @api {get} /image/:id Solicita la información de una imagen
+    * @apiVersion 1.0.0
+    * @apiName GetImageId
+    * @apiGroup Imagen
+    *
+    * @apiParam {Number} id ID único de la imagen.
+    *
+    * @apiSuccess {Number} id ID de la imagen.
+    * @apiSuccess {String} title  Título de la imagen.
+    * @apiSuccess {String} description  Descripción de la imagen.
+    * @apiSuccess {String} source  Fuente de procedencia de la imagen.
+    * @apiSuccess {String} language  Idioma, si procede, de la imagen.
+    * @apiSuccess {String} relation  Referencia a un recurso relacionado con la imagen.
+    * @apiSuccess {String} coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiSuccess {String} creator  Creador, autor o usuario que subió la imagen.
+    * @apiSuccess {String} contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiSuccess {String} publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiSuccess {String} rights  Información sobre los derechos de la imagen.
+    * @apiSuccess {Date} date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiSuccess {String} type  La naturaleza o género del contenido de la imagen.
+    * @apiSuccess {String} format  La manifestación física o digital de la imagen.
+    * @apiSuccess {String} identifier  Una referencia no ambigua a una imagen dada.
+    * @apiSuccess {String} hashname  Nombre de referencia a la imagen dentro del sistema.
+    * @apiSuccess {Date} created_at  Fecha de creación o subida de la imagen.
+    * @apiSuccess {Date} updated_at  Fecha de última modificación del contenido de la imagen.
+    */
 
     /**
      * Display the specified resource.

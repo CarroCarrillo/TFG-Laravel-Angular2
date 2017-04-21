@@ -34,4 +34,5 @@ Route::group(['prefix' => 'v1'], function () {
 
     // IMÁGENES
     Route::get('image', 'ImageController@index');
+    Route::get('image/{id}', 'ImageController@show');
 });

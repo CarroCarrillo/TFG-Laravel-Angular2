@@ -19,3 +19,7 @@ h2.mdl-card__title-text{
 .col-md-4{
   padding: 15px;
 }
+
+.no-underline{
+  text-decoration: none;
+}
