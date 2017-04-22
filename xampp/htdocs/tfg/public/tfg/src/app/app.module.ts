@@ -12,6 +12,7 @@ import { LoginFormComponent } from './components/blocks/login-form.component';
 import { SignUpComponent } from './components/sign-up.component';
 import { ProfileButtonComponent } from './components/blocks/profile-button.component';
 import { ImageDetailComponent } from './components/image-detail.component';
+import { DetailFieldComponent } from './components/blocks/detail-field.component';
 import { PageNotFoundComponent } from './components/404.component';
 
 import { ApiService } from './services/api.service';
@@ -26,6 +27,7 @@ import { ImageResolver } from './services/resolvers/image-resolver.service';
     SignUpComponent,
     ProfileButtonComponent,
     ImageDetailComponent,
+    DetailFieldComponent,
     PageNotFoundComponent
   ],
   imports: [

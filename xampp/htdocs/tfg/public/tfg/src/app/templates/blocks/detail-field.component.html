@@ -1,0 +1,7 @@
+<div class="detail-info-field">
+  <div class="detail-info-field-title">{{ title }}</div>
+  <div *ngIf="!edit && !link" class="detail-info-field-value" [class.is-null]="!value">{{ value }}</div>
+  <div *ngIf="!edit && link || !edit && !value" class="detail-info-field-value" [class.is-null]="!value"><a [attr.href]="link"  target="_blank">{{ value }}</a>
+    <span *ngIf="!value">Campo sin completar</span>
+  </div>
+</div>
