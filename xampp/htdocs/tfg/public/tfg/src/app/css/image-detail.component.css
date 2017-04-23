@@ -10,8 +10,28 @@ img{
 
 h1{
     text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 1.0em;
+    font-weight: 600;
+    margin: 16px 16px;
 }
 
 .col-md-1{
     padding: 10px;
+}
+
+.mdl-list__item{
+    display: inline-block;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

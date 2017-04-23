@@ -13,79 +13,71 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Temas</h3>
-                <div class="col-md-1" *ngFor="let subject of subjects">{{subject}}</div>
+                <ul class="demo-list-item mdl-list">
+                    <li *ngFor="let subject of subjects" class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                        {{subject}}
+                        </span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h3>Descripción</h3>
-                <span>{{image.description}}</span>
+                <detail-field [title]="'Descripción'" [value]="image.description"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h3>Fuente</h3>
-                <span>{{image.source}}</span>
+                <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Fecha</h3>
-                <span>{{image.date}}</span>
+                <detail-field [title]="'Fecha'" [value]="image.date"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Tipo de recurso</h3>
-                <span>{{image.type}}</span>
+                <detail-field [title]="'Tipo de recurso'" [value]="image.type"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Cobertura</h3>
-                <span>{{image.coverage}}</span>
+                <detail-field [title]="'Covertura'" [value]="image.coverage"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Relación</h3>
-                <span>{{image.relation}}</span>
+                <detail-field [title]="'Relación'" [value]="image.relation"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Autor</h3>
-                <span>{{image.author}}</span>
+                <detail-field [title]="'Autor'" [value]="image.author"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Editor</h3>
-                <span>{{image.editor}}</span>
+                <detail-field [title]="'Editor'" [value]="image.editor"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Publicador</h3>
-                <span>{{image.publisher}}</span>
+                <detail-field [title]="'Publicador'" [value]="image.publisher"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Otros colaboradores</h3>
-                <span>{{image.contributor}}</span>
+                <detail-field [title]="'Otros colaboradores'" [value]="image.contributor"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Derechos</h3>
-                <span>{{image.rights}}</span>
+                <detail-field [title]="'Derechos'" [value]="image.rights"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Formato</h3>
-                <span>{{image.format}}</span>
+                <detail-field [title]="'Formato'" [value]="image.format"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Idioma</h3>
-                <span>{{image.language}}</span>
+                <detail-field [title]="'Idioma'" [value]="image.language"></detail-field>
             </div>
             <div class="col-md-6">
-                <h3>Identificador</h3>
-                <span>{{image.identifier}}</span>
+                <detail-field [title]="'Identificador'" [value]="image.identifier"></detail-field>
             </div>
         </div>
     </div>

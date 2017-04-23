@@ -1,0 +1,13 @@
+.detail-info-field {
+    margin: 16px 16px;
+}
+
+.detail-info-field-title {
+    text-transform: uppercase;
+    font-size: 1.0em;
+    font-weight: 600;
+}
+
+.detail-info-field-value.is-null {
+    color: #ccc;
+}
