@@ -4,7 +4,7 @@
   </button>
 </div>
 <div class="shortcut-menu" [class.opened]="_open" (mouseenter)="onMouseEnterMenu($event)" (mouseleave)="onMouseLeaveMenu($event)">
-  <div class="profile-summary">
+  <div class="profile-summary" [routerLink]="_user.url">
     <div class="profile-summary__image"  [routerLink]="_user.url">
       <img [src]="_user.profile_image" alt="profile image">
     </div>

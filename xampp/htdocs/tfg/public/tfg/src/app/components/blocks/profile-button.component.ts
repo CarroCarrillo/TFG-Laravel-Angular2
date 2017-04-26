@@ -16,40 +16,25 @@ export class ProfileButtonComponent implements OnInit {
   @Input("user") _user: User;
 
   constructor(private _router: Router, private _api: ApiService) {
-    
+
   }
 
-  smOnOpen()
-  {
-    this._open = true;
-  }
-
-  smOnClose()
-  {
-    this._open = false;
-  }
-
-
-  ngOnInit()
-  {
+  ngOnInit() {
     this._user = this._api.user;
-    console.log(this._user);
   }
 
-  logout()
-  {
+  logout() {
     this._api.logout();
   }
 
-  onMouseEnterMenu(event)
-  {
-    if(this._closeTimeout) {
+  onMouseEnterMenu(event) {
+    this._open = true;
+    if (this._closeTimeout) {
       clearTimeout(this._closeTimeout);
     }
   }
 
-  onMouseLeaveMenu(event)
-  {
+  onMouseLeaveMenu(event) {
     this._closeTimeout = setTimeout(() => {
       this._open = false;
     }, 400);
