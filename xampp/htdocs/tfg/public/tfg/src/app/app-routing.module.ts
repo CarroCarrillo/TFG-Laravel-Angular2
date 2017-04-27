@@ -6,6 +6,7 @@ import { HeaderSimpleComponent } from './components/headers/header-simple.compon
 import { IndexComponent } from './components/index.component';
 import { SignUpComponent } from './components/sign-up.component';
 import { ImageDetailComponent } from './components/image-detail.component';
+import { UploadImageComponent } from './components/upload-image.component';
 
 import { PageNotFoundComponent } from './components/404.component';
 
@@ -37,6 +38,12 @@ const routes: Routes = [
         { path: 'detalle', component: ImageDetailComponent }
       ]
     }]
+  },
+  {
+    path: 'subir', children: [
+      { path: '', component: HeaderSimpleComponent, outlet: "header" },
+      { path: '', component: UploadImageComponent }
+    ]
   },
   {
     path: '404', children: [

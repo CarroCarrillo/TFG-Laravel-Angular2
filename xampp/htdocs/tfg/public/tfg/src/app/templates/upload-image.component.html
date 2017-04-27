@@ -1,0 +1,144 @@
+<div class="mdl-grid">
+    <div class="col-lg-10">
+        <form enctype="multipart/form-data" (ngSubmit)="onSubmit()" [formGroup]="imageForm">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="../../assets/images/default-image.jpg" alt="Nueva imagen" class="center pointer" id="newImg" (click)="inputImage.click()">
+                </div>
+                <div class="col-md-12">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--file center">
+                        <input class="mdl-textfield__input pointer" placeholder="Selecciona una imagen" type="text" formControlName="filename" (click)="inputImage.click()"
+                            id="newImgName" readonly/>
+                        <div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+                            <i class="material-icons">attach_file</i>
+                            <input #inputImage type="file" accept="image/*" (change)="onChangeFile($event.target.files[0])">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image_information">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label for="titleInput">Título</label>
+                            <input class="mdl-textfield__input" placeholder="Introduce el título de la imagen" type="text" id="titleInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label for="subjectInput">Temas</label>
+                            <textarea class="mdl-textfield__input" placeholder="Introduce temas de la imagen" type="text" rows= "3" id="subjectInput"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label for="descriptionInput">Descripción</label>
+                            <textarea class="mdl-textfield__input" placeholder="Explica brevemente el contenido" type="text" rows= "3" id="descriptionInput"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label for="authorInput">Autor</label>
+                            <input class="mdl-textfield__input" placeholder="Creador" type="text" id="authorInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label for="sourceInput">Fuente</label>
+                            <input class="mdl-textfield__input" placeholder="Indica la procedencia" type="text" id="sourceInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="dateInput">Fecha</label>
+                                <input class="mdl-textfield__input" placeholder="Indica una fecha importante" type="date" id="dateInput">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="typeInput">Tipo de recurso</label>
+                                <input class="mdl-textfield__input" placeholder="Especifica el tipo o categoría" type="text" id="typeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="coverageInput">Covertura</label>
+                                <input class="mdl-textfield__input" placeholder="Cobertura espacial o temporal" type="text" id="coverageInput">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="relationInput">Relación</label>
+                                <input class="mdl-textfield__input" placeholder="Identificador de un segundo recurso relacionado" type="text" id="relationInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="publisherInput">Publicador</label>
+                                <input class="mdl-textfield__input" placeholder="Responsable de que el recurso se encuentre disponible"
+                                    type="text" id="publisherInput">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="contributorInput">Otros colaboradores</label>
+                                <input class="mdl-textfield__input" placeholder="Entidad responsable de hacer contribuciones" type="text" id="contributorInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="rightsInput">Derechos</label>
+                                <input class="mdl-textfield__input" placeholder="Información sobre los derechos" type="text" id="rightsInput">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="formatInput">Formato</label>
+                                <input class="mdl-textfield__input" placeholder="Manifestación física o digital" type="text" id="formatInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="languageInput">Idioma</label>
+                                <input class="mdl-textfield__input" placeholder="Idioma del contenido" type="text" id="languageInput">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="identifierInput">Identificador</label>
+                                <input class="mdl-textfield__input" placeholder="Referencia no ambigua" type="text" id="identifierInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

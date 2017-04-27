@@ -29,6 +29,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <detail-field [title]="'Autor'" [value]="image.author"></detail-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source"></detail-field>
             </div>
         </div>
@@ -46,14 +51,6 @@
             </div>
             <div class="col-md-6">
                 <detail-field [title]="'Relación'" [value]="image.relation"></detail-field>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <detail-field [title]="'Autor'" [value]="image.author"></detail-field>
-            </div>
-            <div class="col-md-6">
-                <detail-field [title]="'Editor'" [value]="image.editor"></detail-field>
             </div>
         </div>
         <div class="row">

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -12,6 +12,7 @@ import { LoginFormComponent } from './components/blocks/login-form.component';
 import { SignUpComponent } from './components/sign-up.component';
 import { ProfileButtonComponent } from './components/blocks/profile-button.component';
 import { ImageDetailComponent } from './components/image-detail.component';
+import { UploadImageComponent } from './components/upload-image.component';
 import { DetailFieldComponent } from './components/blocks/detail-field.component';
 import { PageNotFoundComponent } from './components/404.component';
 
@@ -28,11 +29,13 @@ import { ImageResolver } from './services/resolvers/image-resolver.service';
     ProfileButtonComponent,
     ImageDetailComponent,
     DetailFieldComponent,
+    UploadImageComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule
   ],

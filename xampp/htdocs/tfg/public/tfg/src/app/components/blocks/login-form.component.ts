@@ -12,17 +12,20 @@ import { Token } from '../../models/token';
 export class LoginFormComponent implements OnInit {
     username: string;
     password: string;
+    logging: boolean;
 
     constructor(private api: ApiService, private router: Router) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.logging = false;
+     }
 
     login() {
+        this.logging = true;
         this.api.getToken(this.username, this.password).then(res => {
             this.api.loggedInChanged$.subscribe(() => {
                 if (this.api.loggedin) {
                    // Correcto inicio de sesión
-                   console.log(res);
                 }
             });
         })
