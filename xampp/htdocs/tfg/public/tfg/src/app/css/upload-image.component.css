@@ -2,6 +2,10 @@
     justify-content: center;
 }
 
+form{
+    margin-bottom: 30px;
+}
+
 label{
     text-transform: uppercase;
     font-size: 1.0em;
@@ -23,6 +27,10 @@ label{
 .mdl-textfield--file .mdl-textfield__input {
   box-sizing: border-box;
   width: calc(100% - 32px);
+}
+
+.image_information{
+    margin-bottom: 15px;
 }
 
 .image_information .mdl-textfield.mdl-js-textfield{

@@ -35,4 +35,12 @@ Route::group(['prefix' => 'v1'], function () {
     // IMÁGENES
     Route::get('image', 'ImageController@index');
     Route::get('image/{id}', 'ImageController@show');
+    Route::group(['middleware'=>'auth:api'], function(){
+        Route::post('image', 'ImageController@store');
+    });
+
+    //ARCHIVOS
+    Route::group(['middleware'=>'auth:api'], function(){
+        Route::post('file', 'FileController@store');
+    });
 });

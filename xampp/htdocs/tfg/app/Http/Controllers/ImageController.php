@@ -120,7 +120,7 @@ class ImageController extends Controller
               'hasedName' => 'max:45'
         ]);
 
-        $image = new Node;
+        $image = new Image;
         $image->title = $request->input('title');
         $image->subject = $request->input('subject');
         $image->description = $request->input('description');
@@ -132,11 +132,12 @@ class ImageController extends Controller
         $image->publisher = $request->input('publisher');
         $image->contributor = $request->input('contributor');
         $image->rights = $request->input('rights');
-        $image->date = $request->input('date');
+        if($request->input('date'))
+            $image->date = $request->input('date');
         $image->type = $request->input('type');
         $image->format = $request->input('format');
         $image->identifier = $request->input('identifier');
-        $image->hasedName = $request->input('hasedName');
+        $image->hashedName = $request->input('hashedName');
 
         DB::transaction(function ()  use ($image){
           $image->saveOrFail();

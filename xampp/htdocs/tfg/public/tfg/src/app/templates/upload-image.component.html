@@ -21,7 +21,8 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="mdl-textfield mdl-js-textfield">
                             <label for="titleInput">Título</label>
-                            <input class="mdl-textfield__input" placeholder="Introduce el título de la imagen" type="text" id="titleInput">
+                            <input class="mdl-textfield__input form-control" placeholder="Introduce el título de la imagen" type="text" id="titleInput"
+                            formControlName="title">
                         </div>
                     </div>
                 </div>
@@ -29,7 +30,8 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="mdl-textfield mdl-js-textfield">
                             <label for="subjectInput">Temas</label>
-                            <textarea class="mdl-textfield__input" placeholder="Introduce temas de la imagen" type="text" rows="3" id="subjectInput"></textarea>
+                            <textarea class="mdl-textfield__input" placeholder="Introduce temas de la imagen" type="text" rows="3" id="subjectInput"
+                            class="form-control" formControlName="subject"></textarea>
                         </div>
                     </div>
                 </div>
@@ -37,23 +39,26 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="mdl-textfield mdl-js-textfield">
                             <label for="descriptionInput">Descripción</label>
-                            <textarea class="mdl-textfield__input" placeholder="Explica brevemente el contenido" type="text" rows="3" id="descriptionInput"></textarea>
+                            <textarea class="mdl-textfield__input" placeholder="Explica brevemente el contenido" type="text" rows="3" id="descriptionInput"
+                            class="form-control" formControlName="description"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="mdl-textfield mdl-js-textfield">
-                            <label for="authorInput">Autor</label>
-                            <input class="mdl-textfield__input" placeholder="Creador" type="text" id="authorInput">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="authorInput">Autor</label>
+                                <input class="mdl-textfield__input" placeholder="Creador" type="text" id="authorInput"
+                                class="form-control" formControlName="creator">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="mdl-textfield mdl-js-textfield">
-                            <label for="sourceInput">Fuente</label>
-                            <input class="mdl-textfield__input" placeholder="Indica la procedencia" type="text" id="sourceInput">
+                        <div class="col-md-6">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label for="sourceInput">Fuente</label>
+                                <input class="mdl-textfield__input" placeholder="Indica la procedencia" type="text" id="sourceInput"
+                                class="form-control" formControlName="source">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,13 +67,15 @@
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="dateInput">Fecha</label>
-                                <input class="mdl-textfield__input" placeholder="Indica una fecha importante" type="date" id="dateInput">
+                                <input class="mdl-textfield__input" placeholder="Indica una fecha importante" type="date" id="dateInput"
+                                class="form-control" formControlName="date">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="typeInput">Tipo de recurso</label>
-                                <input class="mdl-textfield__input" placeholder="Especifica el tipo o categoría" type="text" id="typeInput">
+                                <input class="mdl-textfield__input" placeholder="Especifica el tipo o categoría" type="text" id="typeInput"
+                                class="form-control" formControlName="type">
                             </div>
                         </div>
                     </div>
@@ -78,13 +85,15 @@
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="coverageInput">Cobertura</label>
-                                <input class="mdl-textfield__input" placeholder="Cobertura espacial o temporal" type="text" id="coverageInput">
+                                <input class="mdl-textfield__input" placeholder="Cobertura espacial o temporal" type="text" id="coverageInput"
+                                class="form-control" formControlName="coverage">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="relationInput">Relación</label>
-                                <input class="mdl-textfield__input" placeholder="Identificador de un segundo recurso relacionado" type="text" id="relationInput">
+                                <input class="mdl-textfield__input" placeholder="Identificador de un segundo recurso relacionado" type="text" id="relationInput"
+                                class="form-control" formControlName="relation">
                             </div>
                         </div>
                     </div>
@@ -94,13 +103,15 @@
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="publisherInput">Publicador</label>
-                                <input class="mdl-textfield__input" placeholder="Responsable de que el recurso se encuentre disponible" type="text" id="publisherInput">
+                                <input class="mdl-textfield__input" placeholder="Responsable de que el recurso se encuentre disponible" type="text" id="publisherInput"
+                                class="form-control" formControlName="publisher">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="contributorInput">Otros colaboradores</label>
-                                <input class="mdl-textfield__input" placeholder="Entidad responsable de hacer contribuciones" type="text" id="contributorInput">
+                                <input class="mdl-textfield__input" placeholder="Entidad responsable de hacer contribuciones" type="text" id="contributorInput"
+                                class="form-control" formControlName="contributor">
                             </div>
                         </div>
                     </div>
@@ -110,13 +121,15 @@
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="rightsInput">Derechos</label>
-                                <input class="mdl-textfield__input" placeholder="Información sobre los derechos" type="text" id="rightsInput">
+                                <input class="mdl-textfield__input" placeholder="Información sobre los derechos" type="text" id="rightsInput"
+                                class="form-control" formControlName="rights">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="formatInput">Formato</label>
-                                <input class="mdl-textfield__input" placeholder="Manifestación física o digital" type="text" id="formatInput">
+                                <input class="mdl-textfield__input" placeholder="Manifestación física o digital" type="text" id="formatInput"
+                                class="form-control" formControlName="format">
                             </div>
                         </div>
                     </div>
@@ -126,20 +139,22 @@
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="languageInput">Idioma</label>
-                                <input class="mdl-textfield__input" placeholder="Idioma del contenido" type="text" id="languageInput">
+                                <input class="mdl-textfield__input" placeholder="Idioma del contenido" type="text" id="languageInput"
+                                class="form-control" formControlName="language">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mdl-textfield mdl-js-textfield">
                                 <label for="identifierInput">Identificador</label>
-                                <input class="mdl-textfield__input" placeholder="Referencia no ambigua" type="text" id="identifierInput">
+                                <input class="mdl-textfield__input" placeholder="Referencia no ambigua" type="text" id="identifierInput"
+                                class="form-control" formControlName="identifier">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored center">
             Subir
             </button>
 

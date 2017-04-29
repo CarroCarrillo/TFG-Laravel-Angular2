@@ -12,22 +12,24 @@ import '../../../node_modules/tags-input/tags-input.js';
 
 export class UploadImageComponent implements OnInit {
     image: Image = new Image();
+    file: File;
+
     public imageForm = this.fb.group({
-        contributor: [this.image.contributor, ""],
-        coverage: [this.image.coverage, ""],
-        creator: [this.image.creator, ""],
-        date: [this.image.date, ""],
-        description: [this.image.description, ""],
-        format: [this.image.format, ""],
-        identifier: [this.image.identifier, ""],
-        language: [this.image.language, ""],
-        publisher: [this.image.publisher, ""],
-        relation: [this.image.relation, ""],
-        rights: [this.image.rights, ""],
-        source: [this.image.source, ""],
-        subject: [this.image.subject, ""],
-        title: [this.image.title, ""],
-        type: [this.image.type, ""]
+        contributor: [this.image.contributor],
+        coverage: [this.image.coverage],
+        creator: [this.image.creator],
+        date: [this.image.date],
+        description: [this.image.description],
+        format: [this.image.format],
+        identifier: [this.image.identifier],
+        language: [this.image.language],
+        publisher: [this.image.publisher],
+        relation: [this.image.relation],
+        rights: [this.image.rights],
+        source: [this.image.source],
+        subject: [this.image.subject],
+        title: [this.image.title],
+        type: [this.image.type]
     });
 
     constructor(private apiService: ApiService, private fb: FormBuilder) { }
@@ -43,9 +45,23 @@ export class UploadImageComponent implements OnInit {
         };
 
         fr.readAsDataURL(image);
+        this.file = image;
     }
 
-    onSubmit(){
-        console.log(this.image);
+    onSubmit() {
+        this.image = this.imageForm.value;
+        let formData = new FormData();
+        formData.append("file", this.file);
+
+        this.apiService.uploadFile(formData).then(res => {
+            if (res) {
+                console.log(res);
+                this.image.hashedName = res;
+                this.apiService.createImage(this.image).then(image => {
+                    console.log(image);
+                });
+            }
+        });
+
     }
 }

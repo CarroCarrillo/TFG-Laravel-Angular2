@@ -165,12 +165,45 @@ export class ApiService {
             });
     }
 
-    getImage(id: number): Promise<Image>{
+    getImage(id: number): Promise<Image> {
         return this.apiCall('GET', 'image/' + id)
             .then(res => {
                 return res.json() as Image;
             }).catch(error => {
                 this.handleError(error);
             });
+    }
+
+    createImage(image: Image): Promise<Image> {
+        return this.apiCall('POST', 'image', image)
+        .then(res => {
+            return res.json() as Image;
+        }).catch(error => {
+            this.handleError(error);
+        });
+    }
+
+    uploadFile(formData): Promise<string> {
+        let headers = new Headers({
+            'Authorization': this.token.token_type + ' ' + this.token.access_token
+        });
+
+        let self = this;
+        return new Promise(function (resolve, reject) {
+            var request = new XMLHttpRequest();
+            request.open("POST", self.url('file'));
+            request.setRequestHeader('Authorization', self.token.token_type + ' ' + self.token.access_token);
+            request.send(formData);
+            request.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        
+                        resolve(this.responseText);
+                    } else {
+                        reject(JSON.parse(this.responseText) as Error);
+                    }
+                }
+            };
+        });
     }
 }
