@@ -2,6 +2,17 @@
     <div class="col-lg-10">
         <div class="row">
             <div class="col-md-12">
+                <button *ngIf="!edition" (click)="startEdition()" class="mdl-button mdl-js-button mdl-button--raised button">
+                Editar
+                </button>
+                <div *ngIf="edition" class="button">
+                <button (click)="cancelEdition()" class="mdl-button mdl-js-button mdl-button--raised">
+                Cancelar
+                </button>
+                <button (click)="saveEdition()" class="mdl-button mdl-js-button mdl-button--raised">
+                Guardar
+                </button>
+                </div>
                 <img src="../../assets/data/{{image.hashedName}}" alt="{{image.title}}">
             </div>
         </div>
@@ -13,13 +24,16 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Temas</h3>
-                <ul class="demo-list-item mdl-list">
+                <ul *ngIf="!edition" class="demo-list-item mdl-list">
                     <li *ngFor="let subject of subjects" class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                         {{subject}}
                         </span>
                     </li>
                 </ul>
+                <div *ngIf="edition" class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="textareaSubject" [(ngModel)]="image.subject"></textarea>
+                </div>
             </div>
         </div>
         <div class="row">

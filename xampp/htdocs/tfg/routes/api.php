@@ -37,6 +37,7 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('image/{id}', 'ImageController@show');
     Route::group(['middleware'=>'auth:api'], function(){
         Route::post('image', 'ImageController@store');
+        Route::put('image/{id}', 'ImageController@update');
     });
 
     //ARCHIVOS

@@ -206,4 +206,13 @@ export class ApiService {
             };
         });
     }
+
+    updateImage(img: Image): Promise<Image>{
+        return this.apiCall('UPDATE', 'image', img)
+        .then(res => {
+            return res.json() as Image;
+        }).catch(error => {
+            this.handleError(error);
+        });
+    }
 }
