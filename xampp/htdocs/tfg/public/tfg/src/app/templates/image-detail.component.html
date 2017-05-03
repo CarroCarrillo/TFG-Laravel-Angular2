@@ -19,6 +19,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{image.title}}</h1>
+                <detail-field *ngIf="edition" [title]="'Título'" [value]="image.title" [edit]="edition" [image]="image"
+                [property]="'title'"></detail-field>
             </div>
         </div>
         <div class="row">
@@ -38,57 +40,70 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Descripción'" [value]="image.description"></detail-field>
+                <detail-field [title]="'Descripción'" [value]="image.description" [edit]="edition" [image]="image"
+                [property]="'description'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Autor'" [value]="image.author"></detail-field>
+                <detail-field [title]="'Autor'" [value]="image.creator" [edit]="edition" [image]="image"
+                [property]="'creator'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source"></detail-field>
+                <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source" [edit]="edition" [image]="image"
+                [property]="'source'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Fecha'" [value]="image.date"></detail-field>
+                <detail-field [title]="'Fecha'" [value]="image.date" [edit]="edition" [image]="image"
+                [property]="'date'" [date]="true"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Tipo de recurso'" [value]="image.type"></detail-field>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <detail-field [title]="'Covertura'" [value]="image.coverage"></detail-field>
-            </div>
-            <div class="col-md-6">
-                <detail-field [title]="'Relación'" [value]="image.relation"></detail-field>
+                <detail-field [title]="'Tipo de recurso'" [value]="image.type" [edit]="edition" [image]="image"
+                [property]="'type'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Publicador'" [value]="image.publisher"></detail-field>
+                <detail-field [title]="'Covertura'" [value]="image.coverage" [edit]="edition" [image]="image"
+                [property]="'coverage'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Otros colaboradores'" [value]="image.contributor"></detail-field>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <detail-field [title]="'Derechos'" [value]="image.rights"></detail-field>
-            </div>
-            <div class="col-md-6">
-                <detail-field [title]="'Formato'" [value]="image.format"></detail-field>
+                <detail-field [title]="'Relación'" [value]="image.relation" [edit]="edition" [image]="image"
+                [property]="'relation'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Idioma'" [value]="image.language"></detail-field>
+                <detail-field [title]="'Publicador'" [value]="image.publisher" [edit]="edition" [image]="image"
+                [property]="'publisher'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Identificador'" [value]="image.identifier"></detail-field>
+                <detail-field [title]="'Otros colaboradores'" [value]="image.contributor" [edit]="edition" [image]="image"
+                [property]="'contributor'"></detail-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <detail-field [title]="'Derechos'" [value]="image.rights" [edit]="edition" [image]="image"
+                [property]="'rights'"></detail-field>
+            </div>
+            <div class="col-md-6">
+                <detail-field [title]="'Formato'" [value]="image.format" [edit]="edition" [image]="image"
+                [property]="'format'"></detail-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <detail-field [title]="'Idioma'" [value]="image.language" [edit]="edition" [image]="image"
+                [property]="'language'"></detail-field>
+            </div>
+            <div class="col-md-6">
+                <detail-field [title]="'Identificador'" [value]="image.identifier" [edit]="edition" [image]="image"
+                [property]="'identifier'"></detail-field>
             </div>
         </div>
     </div>

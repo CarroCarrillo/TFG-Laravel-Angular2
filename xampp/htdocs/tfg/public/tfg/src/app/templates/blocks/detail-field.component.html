@@ -1,7 +1,27 @@
 <div class="detail-info-field">
   <div class="detail-info-field-title">{{ title }}</div>
+  <div *ngIf="!date">
   <div *ngIf="!edit && !link" class="detail-info-field-value" [class.is-null]="!value">{{ value }}</div>
-  <div *ngIf="!edit && link || !edit && !value" class="detail-info-field-value" [class.is-null]="!value"><a [attr.href]="link"  target="_blank">{{ value }}</a>
+  <div *ngIf="!edit && link || !edit && !value" class="detail-info-field-value" [class.is-null]="!value"><a [attr.href]="link" target="_blank">{{ value }}</a>
     <span *ngIf="!value">Campo sin completar</span>
+  </div>
+  </div>
+  <div *ngIf="date">
+    <div *ngIf="!edit && value" class="detail-info-field-value" [class.is-null]="!value">{{ value | date:'dd/MM/y' }}</div>
+    <div *ngIf="!edit && link || !edit && !value" class="detail-info-field-value" [class.is-null]="!value"><a [attr.href]="link" target="_blank">{{ value }}</a>
+    <span *ngIf="!value && !edit" [class.is-null]="!value">Campo sin completar</span>
+    </div>
+  </div>
+  <div *ngIf="edit">
+    <div *ngIf="!date">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" [attr.id]="'input-' + title" [(ngModel)]="image[property]"
+      [attr.name]="'input-' + title">
+    </div>
+    </div>
+    <div *ngIf="date">
+      <input class="mdl-textfield__input" type="date" [attr.id]="'input-' + title" [(ngModel)]="image[property]"
+      [attr.name]="'input-' + title">
+    </div>
   </div>
 </div>

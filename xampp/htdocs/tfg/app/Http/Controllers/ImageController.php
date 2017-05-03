@@ -197,6 +197,52 @@ class ImageController extends Controller
         //
     }
 
+     /**
+    * @api {put} /image/:id Actualiza la información de una imagen
+    * @apiVersion 1.0.0
+    * @apiName PutImageId
+    * @apiGroup Imagen
+    *
+    * @apiParam {Number} id ID único de la imagen.
+    * @apiParam {Number} id ID de la imagen.
+    * @apiParam {String} title  Título de la imagen.
+    * @apiParam {String} description  Descripción de la imagen.
+    * @apiParam {String} source  Fuente de procedencia de la imagen.
+    * @apiParam {String} language  Idioma, si procede, de la imagen.
+    * @apiParam {String} relation  Referencia a un recurso relacionado con la imagen.
+    * @apiParam {String} coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiParam {String} creator  Creador, autor o usuario que subió la imagen.
+    * @apiParam {String} contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiParam {String} publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiParam {String} rights  Información sobre los derechos de la imagen.
+    * @apiParam {Date} date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiParam {String} type  La naturaleza o género del contenido de la imagen.
+    * @apiParam {String} format  La manifestación física o digital de la imagen.
+    * @apiParam {String} identifier  Una referencia no ambigua a una imagen dada.
+    * @apiParam {String} hashname  Nombre de referencia a la imagen dentro del sistema.
+    * @apiParam {Date} created_at  Fecha de creación o subida de la imagen.
+    * @apiParam {Date} updated_at  Fecha de última modificación del contenido de la imagen.
+    *
+    * @apiSuccess {Number} id ID de la imagen.
+    * @apiSuccess {String} title  Título de la imagen.
+    * @apiSuccess {String} description  Descripción de la imagen.
+    * @apiSuccess {String} source  Fuente de procedencia de la imagen.
+    * @apiSuccess {String} language  Idioma, si procede, de la imagen.
+    * @apiSuccess {String} relation  Referencia a un recurso relacionado con la imagen.
+    * @apiSuccess {String} coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiSuccess {String} creator  Creador, autor o usuario que subió la imagen.
+    * @apiSuccess {String} contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiSuccess {String} publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiSuccess {String} rights  Información sobre los derechos de la imagen.
+    * @apiSuccess {Date} date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiSuccess {String} type  La naturaleza o género del contenido de la imagen.
+    * @apiSuccess {String} format  La manifestación física o digital de la imagen.
+    * @apiSuccess {String} identifier  Una referencia no ambigua a una imagen dada.
+    * @apiSuccess {String} hashname  Nombre de referencia a la imagen dentro del sistema.
+    * @apiSuccess {Date} created_at  Fecha de creación o subida de la imagen.
+    * @apiSuccess {Date} updated_at  Fecha de última modificación del contenido de la imagen.
+    */
+
     /**
      * Update the specified resource in storage.
      *
@@ -225,7 +271,7 @@ class ImageController extends Controller
               'hasedName' => 'max:45'
         ]);
 
-        $image = Node::findOrFail($id);
+        $image = Image::findOrFail($id);
         if($request->has('title'))
             $image->title = $request->input('title');
         if($request->has('subject'))

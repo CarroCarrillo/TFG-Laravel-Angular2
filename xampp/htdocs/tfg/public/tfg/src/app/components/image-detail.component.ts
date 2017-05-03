@@ -11,6 +11,7 @@ import { Image } from 'app/models/image';
 
 export class ImageDetailComponent implements OnInit {
     image: Image;
+    auxImage: Image;
     subjects: string[];
     edition: boolean;
 
@@ -26,16 +27,21 @@ export class ImageDetailComponent implements OnInit {
     }
 
     startEdition(){
+        this.auxImage = new Image();
+        this.auxImage.fromData(this.image);
         this.edition = true;
     }
 
     cancelEdition(){
+        this.image = new Image();
+        this.image.fromData(this.auxImage);
         this.edition = false;
     }
 
     saveEdition(){
         this.edition = false;
         this.subjects = this.image.subject.split('/');
+        console.log(this.image);
         this.api.updateImage(this.image).then(img => {
             
         });

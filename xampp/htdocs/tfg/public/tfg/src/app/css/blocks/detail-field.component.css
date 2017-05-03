@@ -11,3 +11,7 @@
 .detail-info-field-value.is-null {
     color: #ccc;
 }
+
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label{
+    width: 100%;
+}

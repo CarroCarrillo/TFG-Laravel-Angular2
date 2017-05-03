@@ -39,7 +39,7 @@ export class ApiService {
         if (sessionStorage.getItem("token") !== null) {
             this.setToken(JSON.parse(sessionStorage.getItem("token")));
         }
-        if (sessionStorage.getItem("user") !== null) {
+        if (sessionStorage.getItem("user") && sessionStorage.getItem("user") !== null) {
             this.changeLoggedIn(true);
             this.changeUser(JSON.parse(sessionStorage.getItem("user")));
         }
@@ -208,7 +208,7 @@ export class ApiService {
     }
 
     updateImage(img: Image): Promise<Image>{
-        return this.apiCall('UPDATE', 'image', img)
+        return this.apiCall('PUT', 'image/' + img.id, img)
         .then(res => {
             return res.json() as Image;
         }).catch(error => {
