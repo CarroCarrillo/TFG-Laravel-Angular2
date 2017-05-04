@@ -215,4 +215,13 @@ export class ApiService {
             this.handleError(error);
         });
     }
+
+    getUser(id: number): Promise<User>{
+        return this.apiCall('GET', 'user/' + id)
+        .then(res => {
+            return res.json() as User;
+        }).catch(error => {
+            this.handleError(error);
+        });
+    }
 }

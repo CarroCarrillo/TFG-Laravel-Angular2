@@ -14,10 +14,12 @@ import { ProfileButtonComponent } from './components/blocks/profile-button.compo
 import { ImageDetailComponent } from './components/image-detail.component';
 import { UploadImageComponent } from './components/upload-image.component';
 import { DetailFieldComponent } from './components/blocks/detail-field.component';
+import { UserProfileComponent } from './components/user-profile.component';
 import { PageNotFoundComponent } from './components/404.component';
 
 import { ApiService } from './services/api.service';
 import { ImageResolver } from './services/resolvers/image-resolver.service';
+import { UserResolver } from './services/resolvers/user-resolver.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ImageResolver } from './services/resolvers/image-resolver.service';
     ImageDetailComponent,
     DetailFieldComponent,
     UploadImageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { ImageResolver } from './services/resolvers/image-resolver.service';
   ],
   providers: [
     ApiService,
-    ImageResolver
+    ImageResolver,
+    UserResolver
   ],
   bootstrap: [AppComponent]
 })

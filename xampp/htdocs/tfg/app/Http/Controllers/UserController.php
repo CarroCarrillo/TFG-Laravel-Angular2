@@ -113,6 +113,24 @@ class UserController extends Controller
     }
 
     /**
+    * @api {ger} /user/{id} Recupera un usuario específico
+    * @apiVersion 1.0.0
+    * @apiName GetUserId
+    * @apiGroup Usuario
+    *
+    * @apiParam {Number} id  ID del usuario.
+    *
+    * @apiSuccess {Number} id ID del usuario.
+    * @apiSuccess {String} name  Nombre del usuario.
+    * @apiSuccess {String} surname  Apellidos del usuario.
+    * @apiSuccess {String} username  Nombre de usuario del usuario.
+    * @apiSuccess {String} email  E-mail del usuario.
+    * @apiSuccess {String} name  Nombre del usuario.
+    * @apiSuccess {Date} created_at  Fecha de registro del usuario.
+    * @apiSuccess {Date} updated_at  Fecha de última modificación del usuario.
+    * @apiSuccess {String} profile_image  Imagen de perfil del usuario.
+    */
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -120,7 +138,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return $user;
     }
 
     /**

@@ -7,10 +7,12 @@ import { IndexComponent } from './components/index.component';
 import { SignUpComponent } from './components/sign-up.component';
 import { ImageDetailComponent } from './components/image-detail.component';
 import { UploadImageComponent } from './components/upload-image.component';
+import { UserProfileComponent } from './components/user-profile.component';
 
 import { PageNotFoundComponent } from './components/404.component';
 
 import { ImageResolver } from './services/resolvers/image-resolver.service';
+import { UserResolver } from './services/resolvers/user-resolver.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -43,6 +45,19 @@ const routes: Routes = [
     path: 'subir', children: [
       { path: '', component: HeaderSimpleComponent, outlet: "header" },
       { path: '', component: UploadImageComponent }
+    ]
+  },
+  { path: 'perfil', children: [
+      { path: ':id',
+        resolve: {
+          user: UserResolver
+        },
+        children: [
+          { path: '', component: HeaderSimpleComponent, outlet: "header" },
+          { path: '', component: UserProfileComponent }
+        ]
+        },
+
     ]
   },
   {

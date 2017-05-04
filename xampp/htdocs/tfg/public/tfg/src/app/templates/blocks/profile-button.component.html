@@ -1,5 +1,5 @@
 <div class="shortcut-menu__button" [class.opened]="_open" (mouseenter)="onMouseEnterMenu($event)" (mouseleave)="onMouseLeaveMenu($event)">
-  <button id="navigation-profile-btn" class="mdl-button mdl-js-button mdl-button--icon" title="Ver mi perfil" [routerLink]="_user.url">
+  <button id="navigation-profile-btn" class="mdl-button mdl-js-button mdl-button--icon" title="Ver mi perfil" [routerLink]="'/perfil/'+_user.id">
     <i class="profile-button" [ngStyle]="{'background-image': 'url(' + _user.profile_image + ')'}">profile</i>
   </button>
 </div>
