@@ -139,6 +139,9 @@ class ImageController extends Controller
         $image->identifier = $request->input('identifier');
         $image->hashedName = $request->input('hashedName');
 
+        $user = Auth::user();
+        $image->user_id = $user->id;
+
         DB::transaction(function ()  use ($image){
           $image->saveOrFail();
         });

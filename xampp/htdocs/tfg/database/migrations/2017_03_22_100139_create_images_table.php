@@ -31,7 +31,7 @@ class CreateImagesTable extends Migration
             $table->string('format')->nullable();
             $table->string('identifier')->nullable();
             $table->string('hashedName')->nullable();
-            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('user_id')->nullable()->default(1);
             $table->timestamps();
         });
     }

@@ -23,7 +23,7 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('user/{id}', 'UserController@show');
     Route::post('user', 'UserController@store');
     Route::group(['prefix' => 'user/{user}'], function(){
-        
+        Route::get('images', 'UserController@images');
     });
 
     Route::group(['middleware'=>'auth:api'], function(){

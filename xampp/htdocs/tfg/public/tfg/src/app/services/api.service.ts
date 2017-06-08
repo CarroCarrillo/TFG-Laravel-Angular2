@@ -224,4 +224,13 @@ export class ApiService {
             this.handleError(error);
         });
     }
+
+    getUserImages(id: number): Promise<Image[]>{
+        return this.apiCall('GET', 'user/' + id + '/images')
+        .then(res => {
+            return res.json() as Image[];
+        }).catch(error => {
+            this.handleError(error);
+        });
+    }
 }

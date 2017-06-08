@@ -1,0 +1,27 @@
+.demo-card-wide{
+  height: 245px;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-size: cover;
+  background-position: center;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+h2.mdl-card__title-text{
+  text-shadow: 0px 0px 6px #000000;
+}
+
+.col-md-4{
+  padding: 15px;
+  justify-content: center;
+  display: flex;
+}
+
+.no-underline{
+  text-decoration: none;
+}
