@@ -1,14 +1,43 @@
 <div class="left-side-bar mdl-shadow--2dp">
-    <img *ngIf="_user.profile_image" src="{{_user.profile_image}}" alt="profile_image" class="img-circle">
-    <span class="info name">{{ _user.name }} {{ _user.surname }}</span>
-    <span class="info">{{ _user.email }}</span>
-    <span class="info">{{ _user.username }}</span>
-    <button class="mdl-button mdl-js-button mdl-button--fab">
-        <i class="material-icons">edit</i>
-    </button>
+    <ng-container *ngIf="!_edit">
+        <img *ngIf="_user.profile_image" src="{{_user.profile_image}}" alt="profile_image" class="img-circle">
+        <span class="info name">{{ _user.name }} {{ _user.surname }}</span>
+        <span class="info">{{ _user.email }}</span>
+        <span class="info">{{ _user.username }}</span>
+        <button (click)="editProfile()" class="mdl-button mdl-js-button mdl-button--fab edit">
+            <i class="material-icons">edit</i>
+        </button>
+    </ng-container>
+    <ng-container *ngIf="_edit">
+        <div class="img-circle editProfileImage">
+            <img *ngIf="_user.profile_image" src="{{_user.profile_image}}" alt="profile_image" class="img-circle">
+            <i class="material-icons" (click)="changeProfileImage()">mode_edit</i>
+            <input type="file" #newImageProfile id="newImageProfile">
+        </div>
+        <detail-field [title]="'Nombre'" [value]="_user.name" [edit]="_edit" [element]="_user"
+        [property]="'name'"></detail-field>
+        <detail-field [title]="'Apellidos'" [value]="_user.surname" [edit]="_edit" [element]="_user"
+        [property]="'surname'"></detail-field>
+        <detail-field [title]="'Nombre de usuario'" [value]="_user.username" [edit]="_edit" [element]="_user"
+        [property]="'username'"></detail-field>
+        <div class="edit">
+            <button (click)="cancelEdition()" [disabled]="_saving" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Cancelar
+            </button>
+            <button *ngIf="!_saving" (click)="saveEdition()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Guardar
+            </button>
+            <button *ngIf="_saving" (click)="saveEdition()" disabled class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Guardando...
+            </button>
+        </div>
+    </ng-container>
 </div>
 <div class="content"> 
     <ng-container *ngIf="_images">
         <list [images]="_images"></list>
+    </ng-container>
+    <ng-container *ngIf="!_images">
+        <div class="mdl-spinner mdl-js-spinner is-active"></div>
     </ng-container>
 </div>

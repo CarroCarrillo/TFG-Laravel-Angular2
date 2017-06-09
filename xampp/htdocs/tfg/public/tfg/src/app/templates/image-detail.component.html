@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{image.title}}</h1>
-                <detail-field *ngIf="edition" [title]="'Título'" [value]="image.title" [edit]="edition" [image]="image"
+                <detail-field *ngIf="edition" [title]="'Título'" [value]="image.title" [edit]="edition" [element]="image"
                 [property]="'title'"></detail-field>
             </div>
         </div>
@@ -40,69 +40,69 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Descripción'" [value]="image.description" [edit]="edition" [image]="image"
+                <detail-field [title]="'Descripción'" [value]="image.description" [edit]="edition" [element]="image"
                 [property]="'description'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Autor'" [value]="image.creator" [edit]="edition" [image]="image"
+                <detail-field [title]="'Autor'" [value]="image.creator" [edit]="edition" [element]="image"
                 [property]="'creator'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source" [edit]="edition" [image]="image"
+                <detail-field [title]="'Fuente'" [value]="image.source" [link]="image.source" [edit]="edition" [element]="image"
                 [property]="'source'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Fecha'" [value]="image.date" [edit]="edition" [image]="image"
+                <detail-field [title]="'Fecha'" [value]="image.date" [edit]="edition" [element]="image"
                 [property]="'date'" [date]="true"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Tipo de recurso'" [value]="image.type" [edit]="edition" [image]="image"
+                <detail-field [title]="'Tipo de recurso'" [value]="image.type" [edit]="edition" [element]="image"
                 [property]="'type'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Covertura'" [value]="image.coverage" [edit]="edition" [image]="image"
+                <detail-field [title]="'Covertura'" [value]="image.coverage" [edit]="edition" [element]="image"
                 [property]="'coverage'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Relación'" [value]="image.relation" [edit]="edition" [image]="image"
+                <detail-field [title]="'Relación'" [value]="image.relation" [edit]="edition" [element]="image"
                 [property]="'relation'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Publicador'" [value]="image.publisher" [edit]="edition" [image]="image"
+                <detail-field [title]="'Publicador'" [value]="image.publisher" [edit]="edition" [element]="image"
                 [property]="'publisher'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Otros colaboradores'" [value]="image.contributor" [edit]="edition" [image]="image"
+                <detail-field [title]="'Otros colaboradores'" [value]="image.contributor" [edit]="edition" [element]="image"
                 [property]="'contributor'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Derechos'" [value]="image.rights" [edit]="edition" [image]="image"
+                <detail-field [title]="'Derechos'" [value]="image.rights" [edit]="edition" [element]="image"
                 [property]="'rights'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Formato'" [value]="image.format" [edit]="edition" [image]="image"
+                <detail-field [title]="'Formato'" [value]="image.format" [edit]="edition" [element]="image"
                 [property]="'format'"></detail-field>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <detail-field [title]="'Idioma'" [value]="image.language" [edit]="edition" [image]="image"
+                <detail-field [title]="'Idioma'" [value]="image.language" [edit]="edition" [element]="image"
                 [property]="'language'"></detail-field>
             </div>
             <div class="col-md-6">
-                <detail-field [title]="'Identificador'" [value]="image.identifier" [edit]="edition" [image]="image"
+                <detail-field [title]="'Identificador'" [value]="image.identifier" [edit]="edition" [element]="image"
                 [property]="'identifier'"></detail-field>
             </div>
         </div>

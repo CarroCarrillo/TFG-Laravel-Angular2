@@ -233,4 +233,13 @@ export class ApiService {
             this.handleError(error);
         });
     }
+
+    updateMe(user: User): Promise<User>{
+        return this.apiCall('PUT', 'me', user)
+        .then(res => {
+            return res.json() as User;
+        }).catch(error => {
+            this.handleError(error);
+        });
+    }
 }

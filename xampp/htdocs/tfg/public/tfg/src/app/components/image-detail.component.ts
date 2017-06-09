@@ -20,7 +20,7 @@ export class ImageDetailComponent implements OnInit {
     ngOnInit() {
         this.route.data.subscribe((data: { image: Image }) => {
             this.image = data.image;
-            this.subjects = this.image.subject.split('/');
+            if(this.image.subject) this.subjects = this.image.subject.split('/');
         });
 
         this.edition = false;
@@ -41,7 +41,6 @@ export class ImageDetailComponent implements OnInit {
     saveEdition(){
         this.edition = false;
         this.subjects = this.image.subject.split('/');
-        console.log(this.image);
         this.api.updateImage(this.image).then(img => {
             
         });

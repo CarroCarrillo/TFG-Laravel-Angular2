@@ -153,6 +153,29 @@ class UserController extends Controller
         //
     }
 
+
+    /**
+    * @api {put} /me Actualiza el usuario con la sesión iniciada
+    * @apiVersion 1.0.0
+    * @apiName PutMe
+    * @apiGroup Usuario
+    *
+    * @apiParam {String} name  Nombre del usuario.
+    * @apiParam {String} surname  Apellidos del usuario.
+    * @apiParam {String} username  Nombre de usuario del usuario.
+    * @apiParam {String} profile_image  Imagen de perfil del usuario.
+    *
+    * @apiSuccess {Number} id ID del usuario.
+    * @apiSuccess {String} name  Nombre del usuario.
+    * @apiSuccess {String} surname  Apellidos del usuario.
+    * @apiSuccess {String} username  Nombre de usuario del usuario.
+    * @apiSuccess {String} email  E-mail del usuario.
+    * @apiSuccess {String} name  Nombre del usuario.
+    * @apiSuccess {Date} created_at  Fecha de registro del usuario.
+    * @apiSuccess {Date} updated_at  Fecha de última modificación del usuario.
+    * @apiSuccess {String} profile_image  Imagen de perfil del usuario.
+    */
+
     /**
      * Update the specified resource in storage.
      *
@@ -160,9 +183,33 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //Validación de los datos
+        $this->validate($request,[
+            'username' => 'max:45',
+            'name' => 'max:100',
+            'surname' => 'max:255',
+            'profile_image' => ''
+        ]);
+
+        $user = Auth::user();
+
+        if($request->has('username') && $request->input('username') != $user->username)
+            $user->username = $request->input('username');
+        if($request->has('name'))
+            $user->name = $request->input('name');
+        if($request->has('surname'))
+            $user->surname = $request->input('surname');
+    
+        if($request->input('profile_image') !== null)
+          $user->profile_image = $request->input('profile_image');
+        
+        DB::transaction(function ()  use ($user){
+            $user->saveOrFail();
+        });
+
+        return $user;
     }
 
     /**
