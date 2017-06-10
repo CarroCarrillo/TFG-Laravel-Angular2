@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ApiService } from 'app/services/api.service';
+import { Router } from '@angular/router';
 import { Image } from '../models/image';
 import '../../../node_modules/tags-input/tags-input.js';
 
@@ -32,7 +33,7 @@ export class UploadImageComponent implements OnInit {
         type: [this.image.type]
     });
 
-    constructor(private apiService: ApiService, private fb: FormBuilder) { }
+    constructor(private apiService: ApiService, private fb: FormBuilder, private _router: Router) { }
 
     ngOnInit() { }
 
@@ -55,10 +56,11 @@ export class UploadImageComponent implements OnInit {
 
         this.apiService.uploadFile(formData).then(res => {
             if (res) {
-                console.log(res);
                 this.image.hashedName = res;
                 this.apiService.createImage(this.image).then(image => {
                     console.log(image);
+                    this._router.navigate(['/imagen', image.id]);
+                    //TODO Ir a detalle
                 });
             }
         });

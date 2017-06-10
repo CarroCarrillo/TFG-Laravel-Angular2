@@ -70,10 +70,6 @@ img{
    display: none;
 }
 
-.editProfileImage:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .editProfileImage:hover i{
     position: absolute;
     top: 0;
@@ -85,6 +81,8 @@ img{
     color: white;
     align-items: center;
     font-size: -webkit-xxx-large;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
 }
 
 #newImageProfile{

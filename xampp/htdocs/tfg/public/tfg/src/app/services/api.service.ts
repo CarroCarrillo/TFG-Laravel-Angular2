@@ -197,7 +197,6 @@ export class ApiService {
             request.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
-                        
                         resolve(this.responseText);
                     } else {
                         reject(JSON.parse(this.responseText) as Error);

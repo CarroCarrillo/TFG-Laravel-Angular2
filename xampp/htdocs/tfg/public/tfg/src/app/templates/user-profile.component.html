@@ -10,9 +10,9 @@
     </ng-container>
     <ng-container *ngIf="_edit">
         <div class="img-circle editProfileImage">
-            <img *ngIf="_user.profile_image" src="{{_user.profile_image}}" alt="profile_image" class="img-circle">
+            <img *ngIf="_user.profile_image" #imgProfile src="{{_user.profile_image}}" alt="profile_image" class="img-circle">
             <i class="material-icons" (click)="changeProfileImage()">mode_edit</i>
-            <input type="file" #newImageProfile id="newImageProfile">
+            <input type="file" #newImageProfile id="newImageProfile" accept="image/*" (change)="onChangeFile($event.target.files[0])">
         </div>
         <detail-field [title]="'Nombre'" [value]="_user.name" [edit]="_edit" [element]="_user"
         [property]="'name'"></detail-field>

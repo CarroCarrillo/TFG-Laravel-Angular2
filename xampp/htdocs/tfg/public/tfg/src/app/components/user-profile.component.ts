@@ -16,7 +16,9 @@ export class UserProfileComponent implements OnInit {
     private _images: Image[];
     private _edit: boolean;
     private _saving: boolean;
+    private _file: File;
     @ViewChild("newImageProfile") _inputFile: ElementRef;
+    @ViewChild("imgProfile") _imgProfile: ElementRef;
 
     constructor(private _router: Router, private _route: ActivatedRoute, private _api: ApiService) { }
 
@@ -44,22 +46,53 @@ export class UserProfileComponent implements OnInit {
          this._user = new User();
          this._user.fromData(this._auxUser);
          this._edit = false;
+         this._file = null;
      }
 
      saveEdition()
      {
          this._saving = true;
-         this._api.updateMe(this._user).then(res => {
-             this._user = res;
-             this._edit = false;
-             this._saving = false;
-         }).catch(error => {
-             this._saving = false;
-         });
-     }
 
-     changeProfileImage(){
+         if(this._file){
+            let formData = new FormData();
+            formData.append("file", this._file);
+
+            this._api.uploadFile(formData).then(res => {
+                if (res) {
+                    this._user.profile_image = '../../assets/data/' + res;
+                    this.updateMe();
+                }
+            });
+        }
+        else{
+            this.updateMe();
+        }
+    }
+
+    private updateMe(){
+        this._api.updateMe(this._user).then(res => {
+            this._user = res;
+            this._edit = false;
+            this._saving = false;
+        }).catch(error => {
+            this._saving = false;
+        });
+    }
+
+    changeProfileImage(){
          console.log(this._inputFile);
          this._inputFile.nativeElement.click();
-     }
+    }
+
+    onChangeFile(image) {
+        var fr = new FileReader();
+        let self = this;
+
+        fr.onload = function () {
+            self._imgProfile.nativeElement.src = fr.result;
+        };
+
+        fr.readAsDataURL(image);
+        this._file = image;
+    }
 }
