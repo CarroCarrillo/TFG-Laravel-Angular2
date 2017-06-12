@@ -44,4 +44,7 @@ Route::group(['prefix' => 'v1'], function () {
     Route::group(['middleware'=>'auth:api'], function(){
         Route::post('file', 'FileController@store');
     });
+
+    //BUSACADOR
+    Route::get('finder', 'FinderController@search');
 });
