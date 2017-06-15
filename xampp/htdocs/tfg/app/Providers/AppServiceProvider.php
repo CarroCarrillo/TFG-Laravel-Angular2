@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\ImageObserver;
 use App\Observers\UserObserver;
+use App\User;
+use App\Image;
 
 class AppServiceProvider extends ServiceProvider
 {
