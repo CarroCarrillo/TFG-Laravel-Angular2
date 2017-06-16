@@ -83,7 +83,7 @@ sub AUTOLOAD {
 
 # tie returns the object, so the value returned to require will be true.
 tie %Config, 'Config', {
-    archlibexp => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\perl\\lib',
+    archlibexp => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\perl\\lib',
     archname => 'MSWin32-x86-multi-thread',
     cc => 'gcc',
     d_readlink => undef,
@@ -95,14 +95,14 @@ tie %Config, 'Config', {
     inc_version_list => '',
     intsize => '4',
     ldlibpthname => '',
-    libpth => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\c\\lib \\xampp\\c\\i686-w64-mingw32\\lib',
+    libpth => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\c\\lib \\xampp\\c\\i686-w64-mingw32\\lib',
     osname => 'MSWin32',
     osvers => '4.0',
     path_sep => ';',
-    privlibexp => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\perl\\lib',
-    scriptdir => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\perl\\bin',
-    sitearchexp => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\perl\\site\\lib',
-    sitelibexp => 'C:\\Users\\Usuario\\Documents\\TFG-LAravel-Angular2\\xampp\\perl\\site\\lib',
+    privlibexp => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\perl\\lib',
+    scriptdir => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\perl\\bin',
+    sitearchexp => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\perl\\site\\lib',
+    sitelibexp => 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\perl\\site\\lib',
     so => 'dll',
     useithreads => 'define',
     usevendorprefix => 'define',

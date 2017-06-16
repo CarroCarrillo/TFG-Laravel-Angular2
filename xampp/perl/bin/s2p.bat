@@ -40,7 +40,7 @@ goto endofperl
 @rem ';
 #!perl
 #line 43
-    eval 'exec C:\Users\Usuario\Documents\TFG-LAravel-Angular2\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
+    eval 'exec C:\Users\Daniel\Documents\TFG-Laravel-Angular2\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 my $startperl;
 my $perlpath;
@@ -48,7 +48,7 @@ my $perlpath;
 #!perl
 /../
 ($perlpath = <<'/../') =~ s/\s*\z//;
-C:\Users\Usuario\Documents\TFG-LAravel-Angular2\xampp\perl\bin\perl.exe
+C:\Users\Daniel\Documents\TFG-Laravel-Angular2\xampp\perl\bin\perl.exe
 /../
 
 $0 =~ s/^.*?(\w+)[\.\w]*$/$1/;

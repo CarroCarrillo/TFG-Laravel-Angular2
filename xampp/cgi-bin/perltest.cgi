@@ -1,4 +1,4 @@
-#!"C:\Users\Usuario\Documents\TFG-LAravel-Angular2\xampp\perl\bin\perl.exe"
+#!"C:\Users\Daniel\Documents\TFG-Laravel-Angular2\xampp\perl\bin\perl.exe"
 
 print "Content-type: text/html\n\n";
 print '<html>';

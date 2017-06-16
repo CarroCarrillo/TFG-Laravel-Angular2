@@ -26,7 +26,7 @@ goto endofperl
 @rem ';
 #!perl
 #line 29
-    eval 'exec C:\Users\Usuario\Documents\TFG-LAravel-Angular2\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
+    eval 'exec C:\Users\Daniel\Documents\TFG-Laravel-Angular2\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 #!/usr/bin/perl
 

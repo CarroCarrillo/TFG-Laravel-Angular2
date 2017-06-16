@@ -1,0 +1,54 @@
+12:14:51  [main] 	Initializing Control Panel
+12:14:51  [main] 	Windows Version:  Education  64-bit
+12:14:51  [main] 	XAMPP Version: 7.1.1
+12:14:51  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+12:14:51  [main] 	You are not running with administrator rights! This will work for
+12:14:51  [main] 	most application stuff but whenever you do something with services
+12:14:51  [main] 	there will be a security dialogue or things will break! So think 
+12:14:51  [main] 	about running this application with administrator rights!
+12:14:51  [main] 	XAMPP Installation Directory: "c:\users\daniel\documents\tfg-laravel-angular2\xampp\"
+12:14:51  [main] 	Checking for prerequisites
+12:14:53  [main] 	All prerequisites found
+12:14:53  [main] 	Initializing Modules
+12:14:53  [main] 	Starting Check-Timer
+12:14:53  [main] 	Control Panel Ready
+12:15:00  [Apache] 	Attempting to start Apache app...
+12:15:00  [Apache] 	Status change detected: running
+12:15:00  [Apache] 	Status change detected: stopped
+12:15:01  [Apache] 	Error: Apache shutdown unexpectedly.
+12:15:01  [Apache] 	This may be due to a blocked port, missing dependencies, 
+12:15:01  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+12:15:01  [Apache] 	Press the Logs button to view error logs and check
+12:15:01  [Apache] 	the Windows Event Viewer for more clues
+12:15:01  [Apache] 	If you need more help, copy and post this
+12:15:01  [Apache] 	entire log window on the forums
+12:15:17  [main] 	Deinitializing Modules
+12:15:17  [main] 	Deinitializing Control Panel
+
+12:16:09  [main] 	Initializing Control Panel
+12:16:09  [main] 	Windows Version:  Education  64-bit
+12:16:09  [main] 	XAMPP Version: 7.1.1
+12:16:09  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+12:16:09  [main] 	You are not running with administrator rights! This will work for
+12:16:09  [main] 	most application stuff but whenever you do something with services
+12:16:09  [main] 	there will be a security dialogue or things will break! So think 
+12:16:09  [main] 	about running this application with administrator rights!
+12:16:09  [main] 	XAMPP Installation Directory: "c:\users\daniel\documents\tfg-laravel-angular2\xampp\"
+12:16:09  [main] 	Checking for prerequisites
+12:16:09  [main] 	All prerequisites found
+12:16:09  [main] 	Initializing Modules
+12:16:09  [mysql] 	Problem detected!
+12:16:09  [mysql] 	Port 3306 in use by ""C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini" MySQL57"!
+12:16:09  [mysql] 	MySQL WILL NOT start without the configured ports free!
+12:16:09  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+12:16:09  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+12:16:09  [main] 	Starting Check-Timer
+12:16:09  [main] 	Control Panel Ready
+12:16:12  [Apache] 	Attempting to start Apache app...
+12:16:12  [Apache] 	Status change detected: running
+13:41:35  [Apache] 	Attempting to stop Apache (PID: 5028)
+13:41:35  [Apache] 	Attempting to stop Apache (PID: 1724)
+13:41:36  [Apache] 	Status change detected: stopped
+13:41:41  [main] 	Deinitializing Modules
+13:41:41  [main] 	Deinitializing Control Panel
+
