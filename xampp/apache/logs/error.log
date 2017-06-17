@@ -10,3 +10,39 @@ AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/
 AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/xampp/htdocs/tfg/public] does not exist
 [Fri Jun 16 12:16:18.663823 2017] [core:error] [pid 1724:tid 640] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
 [Fri Jun 16 12:16:18.834737 2017] [mpm_winnt:notice] [pid 1724:tid 640] AH00354: Child: Starting 150 worker threads.
+AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/xampp/htdocs/tfg/public] does not exist
+[Sat Jun 17 11:40:16.249246 2017] [core:error] [pid 1808:tid 636] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:40:16.297863 2017] [core:warn] [pid 1808:tid 636] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 17 11:40:17.203235 2017] [mpm_winnt:notice] [pid 1808:tid 636] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 17 11:40:17.203235 2017] [mpm_winnt:notice] [pid 1808:tid 636] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 17 11:40:17.203235 2017] [core:notice] [pid 1808:tid 636] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 17 11:40:17.208564 2017] [mpm_winnt:notice] [pid 1808:tid 636] AH00418: Parent: Created child process 3624
+AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/xampp/htdocs/tfg/public] does not exist
+[Sat Jun 17 11:40:18.484871 2017] [core:error] [pid 3624:tid 676] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/xampp/htdocs/tfg/public] does not exist
+[Sat Jun 17 11:40:19.631883 2017] [core:error] [pid 3624:tid 676] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:40:19.882826 2017] [mpm_winnt:notice] [pid 3624:tid 676] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 17 11:41:36.780509 2017] [core:error] [pid 6556:tid 600] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:41:36.810673 2017] [core:warn] [pid 6556:tid 600] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 17 11:41:36.920248 2017] [mpm_winnt:notice] [pid 6556:tid 600] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 17 11:41:36.920248 2017] [mpm_winnt:notice] [pid 6556:tid 600] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 17 11:41:36.920248 2017] [core:notice] [pid 6556:tid 600] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 17 11:41:36.921763 2017] [mpm_winnt:notice] [pid 6556:tid 600] AH00418: Parent: Created child process 8408
+[Sat Jun 17 11:41:38.065321 2017] [core:error] [pid 8408:tid 684] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:41:39.101939 2017] [core:error] [pid 8408:tid 684] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:41:39.283583 2017] [mpm_winnt:notice] [pid 8408:tid 684] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 17 11:54:07.605646 2017] [core:error] [pid 7764:tid 668] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:54:07.655582 2017] [core:warn] [pid 7764:tid 668] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 17 11:54:07.774937 2017] [mpm_winnt:notice] [pid 7764:tid 668] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 17 11:54:07.774937 2017] [mpm_winnt:notice] [pid 7764:tid 668] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 17 11:54:07.774937 2017] [core:notice] [pid 7764:tid 668] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 17 11:54:07.774937 2017] [mpm_winnt:notice] [pid 7764:tid 668] AH00418: Parent: Created child process 5460
+[Sat Jun 17 11:54:08.953926 2017] [core:error] [pid 5460:tid 512] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:54:09.994359 2017] [core:error] [pid 5460:tid 512] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Sat Jun 17 11:54:10.145061 2017] [mpm_winnt:notice] [pid 5460:tid 512] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 17 11:59:49.010397 2017] [core:warn] [pid 10028:tid 668] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 17 11:59:49.104652 2017] [mpm_winnt:notice] [pid 10028:tid 668] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 17 11:59:49.104652 2017] [mpm_winnt:notice] [pid 10028:tid 668] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 17 11:59:49.104652 2017] [core:notice] [pid 10028:tid 668] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 17 11:59:49.106158 2017] [mpm_winnt:notice] [pid 10028:tid 668] AH00418: Parent: Created child process 804
+[Sat Jun 17 11:59:49.611511 2017] [mpm_winnt:notice] [pid 804:tid 668] AH00354: Child: Starting 150 worker threads.
