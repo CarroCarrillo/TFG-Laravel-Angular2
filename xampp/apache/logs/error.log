@@ -46,3 +46,17 @@ AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/
 [Sat Jun 17 11:59:49.104652 2017] [core:notice] [pid 10028:tid 668] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
 [Sat Jun 17 11:59:49.106158 2017] [mpm_winnt:notice] [pid 10028:tid 668] AH00418: Parent: Created child process 804
 [Sat Jun 17 11:59:49.611511 2017] [mpm_winnt:notice] [pid 804:tid 668] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 23 10:30:39.824171 2017] [core:warn] [pid 1004:tid 204] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 23 10:30:40.785370 2017] [mpm_winnt:notice] [pid 1004:tid 204] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Fri Jun 23 10:30:40.785370 2017] [mpm_winnt:notice] [pid 1004:tid 204] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Fri Jun 23 10:30:40.785370 2017] [core:notice] [pid 1004:tid 204] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Fri Jun 23 10:30:40.787351 2017] [mpm_winnt:notice] [pid 1004:tid 204] AH00418: Parent: Created child process 10368
+[Fri Jun 23 10:30:41.322332 2017] [mpm_winnt:notice] [pid 10368:tid 708] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 23 12:48:15.824398 2017] [php7:error] [pid 10368:tid 1944] [client 127.0.0.1:59636] PHP Fatal error:  Interface 'App\\Interfaces\\ElasticsearchModel' not found in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\app\\User.php on line 10
+[Fri Jun 23 12:48:53.545501 2017] [php7:error] [pid 10368:tid 1944] [client 127.0.0.1:59689] PHP Fatal error:  Interface 'App\\Interfaces\\ElasticsearchModel' not found in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\app\\Image.php on line 8
+[Fri Jun 23 14:54:02.447299 2017] [core:warn] [pid 10688:tid 208] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 23 14:54:03.265594 2017] [mpm_winnt:notice] [pid 10688:tid 208] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Fri Jun 23 14:54:03.265594 2017] [mpm_winnt:notice] [pid 10688:tid 208] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Fri Jun 23 14:54:03.265594 2017] [core:notice] [pid 10688:tid 208] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Fri Jun 23 14:54:03.265594 2017] [mpm_winnt:notice] [pid 10688:tid 208] AH00418: Parent: Created child process 8092
+[Fri Jun 23 14:54:03.902145 2017] [mpm_winnt:notice] [pid 8092:tid 704] AH00354: Child: Starting 150 worker threads.

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Interfaces\ElasticsearchModel;
 
-class Image extends Model
+class Image extends Model implements ElasticsearchModel
 {
     const ELASTICSEARCH_INDEX = 'images';
     const ELASTICSEARCH_EXCEPTIONS = [ ];

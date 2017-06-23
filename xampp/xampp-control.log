@@ -52,3 +52,77 @@
 13:41:41  [main] 	Deinitializing Modules
 13:41:41  [main] 	Deinitializing Control Panel
 
+11:40:07  [main] 	Initializing Control Panel
+11:40:07  [main] 	Windows Version:  Education  64-bit
+11:40:07  [main] 	XAMPP Version: 7.1.1
+11:40:07  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+11:40:07  [main] 	You are not running with administrator rights! This will work for
+11:40:07  [main] 	most application stuff but whenever you do something with services
+11:40:07  [main] 	there will be a security dialogue or things will break! So think 
+11:40:07  [main] 	about running this application with administrator rights!
+11:40:07  [main] 	XAMPP Installation Directory: "c:\users\daniel\documents\tfg-laravel-angular2\xampp\"
+11:40:07  [main] 	Checking for prerequisites
+11:40:08  [main] 	All prerequisites found
+11:40:08  [main] 	Initializing Modules
+11:40:08  [mysql] 	Problem detected!
+11:40:08  [mysql] 	Port 3306 in use by ""C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini" MySQL57"!
+11:40:08  [mysql] 	MySQL WILL NOT start without the configured ports free!
+11:40:08  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+11:40:08  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+11:40:08  [main] 	Starting Check-Timer
+11:40:08  [main] 	Control Panel Ready
+11:40:11  [Apache] 	Attempting to start Apache app...
+11:40:11  [Apache] 	Status change detected: running
+11:41:32  [Apache] 	Attempting to stop Apache (PID: 1808)
+11:41:32  [Apache] 	Attempting to stop Apache (PID: 3624)
+11:41:32  [Apache] 	Status change detected: stopped
+11:41:34  [Apache] 	Attempting to start Apache app...
+11:41:34  [Apache] 	Status change detected: running
+11:54:01  [Apache] 	Attempting to stop Apache (PID: 6556)
+11:54:01  [Apache] 	Attempting to stop Apache (PID: 8408)
+11:54:01  [Apache] 	Status change detected: stopped
+11:54:05  [Apache] 	Attempting to start Apache app...
+11:54:05  [Apache] 	Status change detected: running
+11:55:39  [Apache] 	Attempting to stop Apache (PID: 7764)
+11:55:39  [Apache] 	Attempting to stop Apache (PID: 5460)
+11:55:40  [Apache] 	Status change detected: stopped
+11:59:48  [Apache] 	Attempting to start Apache app...
+11:59:48  [Apache] 	Status change detected: running
+13:24:18  [Apache] 	Attempting to stop Apache (PID: 10028)
+13:24:18  [Apache] 	Attempting to stop Apache (PID: 804)
+13:24:19  [Apache] 	Status change detected: stopped
+13:24:23  [main] 	Deinitializing Modules
+13:24:23  [main] 	Deinitializing Control Panel
+
+10:30:30  [main] 	Initializing Control Panel
+10:30:30  [main] 	Windows Version:  Education  64-bit
+10:30:30  [main] 	XAMPP Version: 7.1.1
+10:30:30  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+10:30:30  [main] 	You are not running with administrator rights! This will work for
+10:30:30  [main] 	most application stuff but whenever you do something with services
+10:30:30  [main] 	there will be a security dialogue or things will break! So think 
+10:30:30  [main] 	about running this application with administrator rights!
+10:30:30  [main] 	XAMPP Installation Directory: "c:\users\daniel\documents\tfg-laravel-angular2\xampp\"
+10:30:30  [main] 	Checking for prerequisites
+10:30:30  [main] 	All prerequisites found
+10:30:30  [main] 	Initializing Modules
+10:30:30  [mysql] 	Problem detected!
+10:30:30  [mysql] 	Port 3306 in use by ""C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini" MySQL57"!
+10:30:30  [mysql] 	MySQL WILL NOT start without the configured ports free!
+10:30:30  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+10:30:30  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+10:30:30  [main] 	Starting Check-Timer
+10:30:30  [main] 	Control Panel Ready
+10:30:36  [Apache] 	Attempting to start Apache app...
+10:30:37  [Apache] 	Status change detected: running
+14:53:57  [Apache] 	Attempting to stop Apache (PID: 1004)
+14:53:57  [Apache] 	Attempting to stop Apache (PID: 10368)
+14:53:58  [Apache] 	Status change detected: stopped
+14:54:01  [Apache] 	Attempting to start Apache app...
+14:54:01  [Apache] 	Status change detected: running
+15:05:40  [Apache] 	Attempting to stop Apache (PID: 10688)
+15:05:40  [Apache] 	Attempting to stop Apache (PID: 8092)
+15:05:40  [Apache] 	Status change detected: stopped
+15:05:52  [main] 	Deinitializing Modules
+15:05:52  [main] 	Deinitializing Control Panel
+

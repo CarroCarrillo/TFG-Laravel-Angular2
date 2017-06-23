@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notifiable;
 use App\Interfaces\ElasticsearchModel;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements ElasticsearchModel
 {
     use HasApiTokens, Notifiable;
 
