@@ -1,0 +1,5 @@
+ <h2>Resultados para: {{ _query }}</h2>
+        <div *ngFor="let hit of _hits"> {{ hit.title }}</div>
+<div *ngIf="_end">
+    No hay más resultados
+</div>

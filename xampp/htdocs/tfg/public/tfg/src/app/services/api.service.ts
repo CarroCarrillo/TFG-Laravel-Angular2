@@ -241,4 +241,13 @@ export class ApiService {
             this.handleError(error);
         });
     }
+
+    find(params): Promise<any>
+    {
+        return this.apiCall('GET', 'finder', params).then(result => {
+            return result.json();
+        }).catch(error => {
+            this.handleError(error as Error);
+        });
+    }
 }

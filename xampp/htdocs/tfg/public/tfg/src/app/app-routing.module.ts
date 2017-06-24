@@ -8,6 +8,7 @@ import { SignUpComponent } from './components/sign-up.component';
 import { ImageDetailComponent } from './components/image-detail.component';
 import { UploadImageComponent } from './components/upload-image.component';
 import { UserProfileComponent } from './components/user-profile.component';
+import { FinderComponent } from './components/finder.component';
 
 import { PageNotFoundComponent } from './components/404.component';
 
@@ -45,6 +46,12 @@ const routes: Routes = [
     path: 'subir', children: [
       { path: '', component: HeaderSimpleComponent, outlet: "header" },
       { path: '', component: UploadImageComponent }
+    ]
+  },
+  {
+    path: 'buscador', children: [
+      { path: '', component: HeaderSimpleComponent, outlet: "header" },
+      { path: '', component: FinderComponent }
     ]
   },
   { path: 'perfil', children: [

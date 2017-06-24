@@ -1,0 +1,47 @@
+.search-panel {
+  padding: 8px;
+  color: #999;
+  width: 100%;
+  background-color: rgba(255,255,255,.95);
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+form {
+  margin: 0;
+}
+
+input:focus {
+    border: none;
+}
+
+.mdl-textfield__input {
+    border-bottom: none !important;
+    padding-left: 40px !important;
+    box-sizing: border-box;
+}
+
+label {
+    position: absolute !important;
+    left: 8px !important;
+    top: 7px !important;
+}
+
+.live-hits {
+    position: absolute;
+    top: 42px;
+    color: rgba(0,0,0,.5);
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,.3);
+    width: 100%;
+    border-radius: 2px;
+    left: 0;
+}
+
+.live-hit {
+    padding: 16px;
+}
+
+.live-hit:hover {
+    background-color: rgba(0,0,0,.1);
+}

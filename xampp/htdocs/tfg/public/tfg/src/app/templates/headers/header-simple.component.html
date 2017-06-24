@@ -5,7 +5,9 @@
   </span>
   </a>
   <!-- Add spacer, to align navigation to the right -->
-  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-layout-spacer">
+    <search-bar [placeholder]="'Buscar en BVMC'"></search-bar>
+  </div>
   <!-- Navigation. We hide it in small screens. -->
   <nav class="mdl-navigation mdl-layout--large-screen-only" *ngIf="user != null">
     <a class="mdl-navigation__link" routerLink="/subir">Subir</a>

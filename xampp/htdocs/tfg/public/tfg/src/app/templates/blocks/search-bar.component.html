@@ -1,0 +1,8 @@
+<div class="mdl-textfield mdl-js-textfield panel search-panel">
+  <label class="mdl-button mdl-js-button mdl-button--icon" for="search-type">
+    <i class="material-icons">search</i>
+  </label>
+    <form (submit)="onSubmit()">
+      <input class="mdl-textfield__input" type="text" [(ngModel)]="_query" name="query" [attr.placeholder]="_placeholder" id="search-type">
+    </form>
+</div>

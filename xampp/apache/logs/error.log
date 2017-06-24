@@ -60,3 +60,15 @@ AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/
 [Fri Jun 23 14:54:03.265594 2017] [core:notice] [pid 10688:tid 208] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
 [Fri Jun 23 14:54:03.265594 2017] [mpm_winnt:notice] [pid 10688:tid 208] AH00418: Parent: Created child process 8092
 [Fri Jun 23 14:54:03.902145 2017] [mpm_winnt:notice] [pid 8092:tid 704] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 24 12:15:00.837767 2017] [core:warn] [pid 4920:tid 700] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 24 12:15:02.110944 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 24 12:15:02.110944 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 24 12:15:02.110944 2017] [core:notice] [pid 4920:tid 700] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 24 12:15:02.126573 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00418: Parent: Created child process 4512
+[Sat Jun 24 12:15:02.707277 2017] [mpm_winnt:notice] [pid 4512:tid 668] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 24 13:22:27.740767 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00428: Parent: child process 4512 exited with status 3221226356 -- Restarting.
+[Sat Jun 24 13:22:36.797753 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Jun 24 13:22:36.797753 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Sat Jun 24 13:22:36.802260 2017] [core:notice] [pid 4920:tid 700] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Sat Jun 24 13:22:36.819398 2017] [mpm_winnt:notice] [pid 4920:tid 700] AH00418: Parent: Created child process 9164
+[Sat Jun 24 13:22:37.486807 2017] [mpm_winnt:notice] [pid 9164:tid 692] AH00354: Child: Starting 150 worker threads.
