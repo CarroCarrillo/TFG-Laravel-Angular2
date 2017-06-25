@@ -85,22 +85,26 @@ export class FinderComponent implements OnInit {
 //     });
 //   }
 
-//   onScrollBottom(event)
-//   {
-//       if(this._scroll) {
-//         this._api.find({ scroll_id: this._scroll }).then(result => {
-//           if(result) {
-//             if(result.hits.hits.length > 0) {
-//               this._hits = this._hits.concat(result.hits.hits as Hit[]);
-//               this._scroll = result._scroll_id;
-//             } else {
-//               this._scroll = null;
-//               this._end = true;
-//             }
-//           }
-//         });
-//       }
-//   }
+  onScroll(event)
+  {
+    let target = event.target;
+    if(target.scrollTop + 1 >= target.scrollHeight - target.clientHeight) {
+
+      if(this._scroll) {
+        this._api.find({ scroll_id: this._scroll }).then(result => {
+          if(result) {
+            if(result.hits.hits.length > 0) {
+              this._hits = this._hits.concat(result.hits.hits as Hit[]);
+              this._scroll = result._scroll_id;
+            } else {
+              this._scroll = null;
+              this._end = true;
+            }
+          }
+        });
+      }
+    }
+  }
 
 //   checkBoxesHandler (group: string) {
 //     if(group == 'nodes') {

@@ -1,5 +1,47 @@
- <h2>Resultados para: {{ _query }}</h2>
-        <div *ngFor="let hit of _hits"> {{ hit.title }}</div>
-<div *ngIf="_end">
-    No hay más resultados
+<h2>Resultados para: {{ _query }}</h2>
+<div class="mdl-grid">
+    <div class="col-md-2 panel-left">
+        Hola
+    </div>
+    <div class="col-lg-10 content-right" (scroll)="onScroll($event)">
+        <div *ngFor="let hit of _hits">
+            <div class="col-md-4" *ngIf="hit._type == 'image'">
+                <a routerLink="/imagen/{{hit._source.id}}" class="no-underline">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" [ngStyle]="{'background-image': 'url(../../assets/data/' + hit._source.hashedName + ')'}">
+                            <h2 class="mdl-card__title-text">{{ hit._source.title }}</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            {{hit._source.description }}
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" *ngIf="hit._type == 'user'">
+                <a routerLink="/perfil/{{hit._source.id}}" class="no-underline">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" [ngStyle]="{'background-image': 'url(' + hit._source.profile_image + ')'}">
+                            <h2 class="mdl-card__title-text">{{ hit._source.username }}</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            {{ hit._source.name }} {{ hit._source.surname }}
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="_end">
+        No hay más resultados
+    </div>
 </div>
