@@ -31,10 +31,25 @@ a.no-underline{
     position: fixed;
 }
 
+.panel-left label{
+  display: block;
+}
+
+.close{
+  height: 0;
+  overflow: hidden;
+}
+
+.open{
+  height: initial;
+}
+
 .content-right{
-    margin-left: 215px;
+    margin-left: 250px;
     overflow-y: auto;
     position: absolute;
     top: 60px;
     bottom: 0;
+    right: 0;
+    left: 0;
 }

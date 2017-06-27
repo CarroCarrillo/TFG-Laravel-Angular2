@@ -1,22 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { ApiService } from '../services/api.service';
 import { Hit } from '../models/hit';
 
-
 @Component({
   selector: 'app-finder',
   templateUrl: '../templates/finder.component.html',
-  styleUrls: ['../css/finder.component.css']
+  styleUrls: ['../css/finder.component.css'],
+  animations: [
+        trigger('openPanel', [
+            state('inactive', style({
+                transform: 'scale(1)',
+                backgroundColor: '#eee'
+            })),
+            state('active', style({
+                transform: 'scale(1.5)',
+                backgroundColor: '#cfd8dc'
+            })),
+            transition('inactive => active', animate('1000ms ease-in')),
+            transition('active => inactive', animate('1000ms ease-out'))
+        ]),
+    ]
 })
 export class FinderComponent implements OnInit {
   private _query: string;
   private _end: boolean;
   private _scroll: string;
   private _hits: Hit[] = [];
-  private _allContents: boolean;
-  private _allLibraries: boolean;
+  private _images: boolean;
   private _searchTypes: Object;
 
   private _activatedRoute: ActivatedRoute;
@@ -31,8 +43,7 @@ export class FinderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._allLibraries = false;
-    this._allContents = false;
+    this._images = true;
     this._searchTypes = {};
 
     this._activatedRoute.queryParams.subscribe((queryParams: Params) => {
@@ -44,7 +55,6 @@ export class FinderComponent implements OnInit {
           if(result) {
             if(result.hits.hits.length > 0) {
               this._hits = this._hits.concat(result.hits.hits as Hit[]);
-              console.log(this._hits);
               this._scroll = result._scroll_id;
             } else {
               this._scroll = null;
@@ -54,6 +64,12 @@ export class FinderComponent implements OnInit {
         });
       }
     });
+  }
+
+  toggleImages()
+  {
+    this._images = (this._images === true ? false : true);
+    console.log("toggle");
   }
 
 //   onFilterChange()

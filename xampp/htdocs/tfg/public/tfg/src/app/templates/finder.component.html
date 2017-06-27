@@ -1,7 +1,44 @@
 <h2>Resultados para: {{ _query }}</h2>
 <div class="mdl-grid">
     <div class="col-md-2 panel-left">
-        Hola
+        <div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-images">
+            <input type="checkbox" id="switch-images" class="mdl-switch__input" (change)="toggleImages()" checked>
+            <span class="mdl-switch__label">Imágenes</span>
+            </label>
+            <div class="close" [class.open]="_images">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-title">
+                <input type="checkbox" id="checkbox-title" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Título</span>
+                </label>
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-subject">
+                <input type="checkbox" id="checkbox-subject" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Temas</span>
+                </label>
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-description">
+                <input type="checkbox" id="checkbox-description" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Descripción</span>
+                </label>
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-source">
+                <input type="checkbox" id="checkbox-source" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Fuente</span>
+                </label>
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-format">
+                <input type="checkbox" id="checkbox-format" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Formato</span>
+                </label>
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-author">
+                <input type="checkbox" id="checkbox-author" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">Autor</span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-users">
+            <input type="checkbox" id="switch-users" class="mdl-switch__input" checked>
+            <span class="mdl-switch__label">Usuarios</span>
+            </label>
+        </div>
     </div>
     <div class="col-lg-10 content-right" (scroll)="onScroll($event)">
         <div *ngFor="let hit of _hits">
@@ -40,8 +77,8 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div *ngIf="_end">
-        No hay más resultados
+        <div *ngIf="_end">
+            No hay más resultados
+        </div>
     </div>
 </div>
