@@ -29,6 +29,7 @@ a.no-underline{
 
 .panel-left{
     position: fixed;
+    width: 250px;
 }
 
 .panel-left label{
@@ -38,10 +39,8 @@ a.no-underline{
 .close{
   height: 0;
   overflow: hidden;
-}
-
-.open{
-  height: initial;
+  margin-left: 26px;
+  opacity: 0.8;
 }
 
 .content-right{
@@ -52,4 +51,14 @@ a.no-underline{
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+.filter_group{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#end{
+  text-align: center;
+  margin-top: 20px;
 }

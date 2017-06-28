@@ -11,15 +11,23 @@ import { Hit } from '../models/hit';
   animations: [
         trigger('openPanel', [
             state('inactive', style({
-                transform: 'scale(1)',
-                backgroundColor: '#eee'
+                height: '0'
             })),
             state('active', style({
-                transform: 'scale(1.5)',
-                backgroundColor: '#cfd8dc'
+                height: '365px'
             })),
             transition('inactive => active', animate('1000ms ease-in')),
             transition('active => inactive', animate('1000ms ease-out'))
+        ]),
+        trigger('openPanelSmall', [
+            state('inactive', style({
+                height: '0'
+            })),
+            state('active', style({
+                height: '100px'
+            })),
+            transition('inactive => active', animate('500ms ease-in')),
+            transition('active => inactive', animate('500ms ease-out'))
         ]),
     ]
 })
@@ -28,23 +36,24 @@ export class FinderComponent implements OnInit {
   private _end: boolean;
   private _scroll: string;
   private _hits: Hit[] = [];
-  private _images: boolean;
-  private _searchTypes: Object;
+  private _imagesState: string;
+  private _usersState: string;
+  private _fields: Array<string>;
+  private _types: Array<string>;
 
   private _activatedRoute: ActivatedRoute;
   private _api: ApiService;
-  
-  private _nodeTypesSubs: Subscription;
-  private _contentTypesSubs: Subscription;
 
   constructor(activatedRoute: ActivatedRoute, api: ApiService) {
     this._activatedRoute = activatedRoute;
     this._api = api;
+    this._imagesState = "active";
+    this._usersState = "active";
    }
 
   ngOnInit() {
-    this._images = true;
-    this._searchTypes = {};
+    this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
+    this._types = ["images", "users"];
 
     this._activatedRoute.queryParams.subscribe((queryParams: Params) => {
       this._end = false;
@@ -68,8 +77,63 @@ export class FinderComponent implements OnInit {
 
   toggleImages()
   {
-    this._images = (this._images === true ? false : true);
-    console.log("toggle");
+    this._imagesState = this._imagesState == "active" ? "inactive" : "active";
+    this.toggle(this._types, 'images');
+  }
+
+  toggleUsers()
+  {
+    this._usersState = this._usersState == "active" ? "inactive" : "active";
+    this.toggle(this._types, 'users');
+  }
+
+  private toggle(array, value) {
+      var index = array.indexOf(value);
+
+      if (index === -1) {
+          array.push(value);
+      } else {
+          array.splice(index, 1);
+      }
+
+      this.onFilterChange();
+  }
+
+  onFilterChange()
+  {
+    if(this._fields.length < 19){
+
+      if(this._query) {
+        this._end = false;
+        this._hits = [];
+        this._api.find({ q: this._query, fields: this._fields, index: this._types.join() }).then(result => {
+          if(result) {
+            if(result.hits.hits.length > 0) {
+              this._hits = this._hits.concat(result.hits.hits as Hit[]);
+              this._scroll = result._scroll_id;
+            } else {
+              this._scroll = null;
+              this._end = true;
+            }
+          }
+        });
+      }
+    }
+    else{
+      this._end = false;
+        this._hits = [];
+        this._api.find({ q: this._query, index: this._types.join() }).then(result => {
+          if(result) {
+            if(result.hits.hits.length > 0) {
+              this._hits = this._hits.concat(result.hits.hits as Hit[]);
+              this._scroll = result._scroll_id;
+            } else {
+              this._scroll = null;
+              this._end = true;
+            }
+          }
+        });
+      }
   }
 
 //   onFilterChange()
