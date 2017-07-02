@@ -213,14 +213,24 @@ class UserController extends Controller
     }
 
     /**
+    * @api {delete} /me Elimina al usuario con la sesión iniciada
+    * @apiVersion 1.0.0
+    * @apiName DeleteMe
+    * @apiGroup Usuario
+    *
+    * @apiParam {Number} id ID único del usuario.
+    */
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $user = Auth::user();
+        $user->delete();
     }
 
     /**
@@ -244,7 +254,7 @@ class UserController extends Controller
     }
 
     /**
-    * @api {get} /user/{id} Recupera las imágenes de un usuario específico
+    * @api {get} /user/{id}/images Recupera las imágenes de un usuario específico
     * @apiVersion 1.0.0
     * @apiName GetUserImages
     * @apiGroup Usuario

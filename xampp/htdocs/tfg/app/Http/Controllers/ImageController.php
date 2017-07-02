@@ -74,6 +74,24 @@ class ImageController extends Controller
     * @apiName PostImage
     * @apiGroup Imagen
     *
+    * @apiParam {Number} id ID único de la imagen.
+    * @apiParam {Number} id ID de la imagen.
+    * @apiParam {String} title  Título de la imagen.
+    * @apiParam {String} description  Descripción de la imagen.
+    * @apiParam {String} source  Fuente de procedencia de la imagen.
+    * @apiParam {String} language  Idioma, si procede, de la imagen.
+    * @apiParam {String} relation  Referencia a un recurso relacionado con la imagen.
+    * @apiParam {String} coverage  El ámbito, el contexto o la localización de la imagen.
+    * @apiParam {String} creator  Creador, autor o usuario que subió la imagen.
+    * @apiParam {String} contributor  Entitdad responsable de hacer contribuciones al contenido de la imagen.
+    * @apiParam {String} publisher  Entidad responsable de hacer la imagen disponible.
+    * @apiParam {String} rights  Información sobre los derechos de la imagen.
+    * @apiParam {Date} date  Una fecha asociada con un evento en el ciclo de vida de la imagen.
+    * @apiParam {String} type  La naturaleza o género del contenido de la imagen.
+    * @apiParam {String} format  La manifestación física o digital de la imagen.
+    * @apiParam {String} identifier  Una referencia no ambigua a una imagen dada.
+    * @apiParam {String} hashname  Nombre de referencia a la imagen dentro del sistema.
+    *
     * @apiSuccess {Number} id ID de la imagen.
     * @apiSuccess {String} title  Título de la imagen.
     * @apiSuccess {String} description  Descripción de la imagen.
@@ -315,6 +333,15 @@ class ImageController extends Controller
 
         return $image;
     }
+
+    /**
+    * @api {delete} /image/:id Elimina la información de una imagen
+    * @apiVersion 1.0.0
+    * @apiName DeleteImageId
+    * @apiGroup Imagen
+    *
+    * @apiParam {Number} id ID único de la imagen.
+    */
 
     /**
      * Remove the specified resource from storage.

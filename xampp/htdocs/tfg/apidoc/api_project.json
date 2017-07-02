@@ -1,20 +1,14 @@
 {
-  "name": "TFG - Documentación de la API",
-  "version": "1.0.0",
-  "description": "Documentación de la API desarrollada por Daniel Carrillo Martínez para su TFG.",
-  "title": "TFG - Documentación de la API",
-  "url": "https://localhost:8080/api/v1",
-  "template": {
-    "withCompare": true,
-    "withGenerator": true
-  },
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2017-03-31T10:15:35.670Z",
+    "time": "2017-07-02T11:45:24.483Z",
     "url": "http://apidocjs.com",
-    "version": "0.17.5"
+    "version": "0.17.6"
   }
 }

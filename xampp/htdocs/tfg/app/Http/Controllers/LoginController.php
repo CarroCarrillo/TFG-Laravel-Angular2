@@ -11,7 +11,7 @@ class LoginController extends Controller
     * @api {post} /token Realiza el inicio de sesión recuperando el token
     * @apiVersion 1.0.0
     * @apiName postToken
-    * @apiGroup Inicio de sesión
+    * @apiGroup Login
     *
     * @apiParam {String} username  Nombre del usuario o correo electrónico.
     * @apiParam {String} password  Contraseña.
