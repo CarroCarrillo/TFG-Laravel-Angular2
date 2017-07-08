@@ -36,3 +36,12 @@
 .cursor_hand{
     cursor: pointer;
 }
+
+#logocervantes{
+    margin-top: -5px;
+    width: 40px;
+}
+
+.mdl-layout__header-row{
+    background-color: #bc251b;
+}

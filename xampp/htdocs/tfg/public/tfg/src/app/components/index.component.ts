@@ -10,14 +10,30 @@ import { Image } from '../models/image';
 
 export class IndexComponent implements OnInit {
     lastImages: Image[];
+    page: number;
 
-    constructor(private api: ApiService) { }
+    constructor(private api: ApiService) { 
+        this.page = 0
+    }
 
     ngOnInit() {
-        this.api.getLastImages().then(res => {
+        this.api.getLastImages({ page: this.page }).then(res => {
             if (res) {
                 this.lastImages = res;
             }
         });
+    }
+
+    onScroll(event)
+    {
+        let target = event.target;
+        if(target.scrollTop + 1 >= target.scrollHeight - target.clientHeight) {
+            this.page++;
+            this.api.getLastImages({ page: this.page }).then(res => {
+                if (res) {
+                    this.lastImages = this.lastImages.concat(res);
+                }
+            });
+        }
     }
 }

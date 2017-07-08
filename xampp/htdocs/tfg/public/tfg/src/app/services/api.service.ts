@@ -156,8 +156,8 @@ export class ApiService {
         });
     }
 
-    getLastImages(): Promise<Image[]> {
-        return this.apiCall('GET', 'image')
+    getLastImages(args?: Object): Promise<Image[]> {
+        return this.apiCall('GET', 'image', args)
             .then(res => {
                 return res.json() as Image[];
             }).catch(error => {

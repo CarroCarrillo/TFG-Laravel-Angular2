@@ -1,17 +1,19 @@
 <div class="mdl-layout__header-row">
   <!-- Title -->
   <a class="mdl-navigation__link" routerLink="/inicio"><span class="mdl-layout-title">
-  Biblioteca Virtual Miguel de Cervantes
+   <img id="logocervantes" src="assets/images/cervanteslogo.png" alt="Biblioteca Virtual Miguel de Cervantes"> BVMC
   </span>
   </a>
   <!-- Add spacer, to align navigation to the right -->
   <div class="mdl-layout-spacer">
-    <search-bar [placeholder]="'Buscar en BVMC'"></search-bar>
+    <search-bar [placeholder]="'Buscar en BVMC...'"></search-bar>
   </div>
   <!-- Navigation. We hide it in small screens. -->
   <nav class="mdl-navigation mdl-layout--large-screen-only" *ngIf="user != null">
-    <a class="mdl-navigation__link" routerLink="/subir">Subir</a>
-
+    <a class="mdl-navigation__link" routerLink="/subir"><i id="file_upload" class="material-icons">file_upload</i></a>
+    <div class="mdl-tooltip" data-mdl-for="file_upload">
+    Subir
+    </div>
     <div id="navigation-create-btn" class="mdl-navigation__link relative">
       <profile-button></profile-button>
     </div>

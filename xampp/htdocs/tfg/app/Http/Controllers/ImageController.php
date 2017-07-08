@@ -50,9 +50,9 @@ class ImageController extends Controller
             'page' => 'sometimes|numeric'
         ]);
 
-        $limit = ($request->input('page') !== null) ? $request->input('limit') : 20;
+        $limit = ($request->input('limit') !== null) ? $request->input('limit') : 20;
         $page = ($request->input('page') !== null) ? $request->input('page') : 0;
-        //Devuelve los nodos relacionados con los tags
+        
         return Image::offset($limit*$page)
             ->limit($limit)
             ->get();
