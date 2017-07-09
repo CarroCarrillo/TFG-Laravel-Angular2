@@ -1,24 +1,27 @@
 .profile-button {
     color: transparent;
-    background-size: contain;
-    background-color: rgba(255,255,255,.7);
+    background-size: 32px 32px;
+    background-color: rgba(255,255,255,1.0);
 }
 
 .profile-summary__image {
     display: table-cell;
     width: 64px;
+    display: block;
+    margin: 0 auto;
 }
 
 .profile-summary {
-    display: table;
+    display: inline-grid;
     margin-bottom: 16px;
     cursor: pointer;
+    width: 100%;
 }
 
 .profile-summary__info {
     display: table-cell;
     color: rgba(0,0,0,1.0);
-    padding-left: 16px;
+    text-align: center;
     line-height: initial;
     vertical-align: top;
 }
@@ -46,7 +49,8 @@
     padding: 16px;
     right: 25px;
     color: black;
-    width: 342px;
+    min-width: 200px;
+    width: auto;
     border-radius: 4px;
     z-index: 999;
     box-shadow: 0px 2px 3px rgba(0,0,0,.5);
