@@ -16,21 +16,21 @@ export class UploadImageComponent implements OnInit {
     file: File;
 
     public imageForm = this.fb.group({
-        contributor: [this.image.contributor],
-        coverage: [this.image.coverage],
-        creator: [this.image.creator],
-        date: [this.image.date],
-        description: [this.image.description],
-        format: [this.image.format],
-        identifier: [this.image.identifier],
-        language: [this.image.language],
-        publisher: [this.image.publisher],
-        relation: [this.image.relation],
-        rights: [this.image.rights],
-        source: [this.image.source],
-        subject: [this.image.subject],
-        title: [this.image.title],
-        type: [this.image.type]
+        contributor: [""],
+        coverage: [""],
+        creator: [""],
+        date: [""],
+        description: [""],
+        format: [""],
+        identifier: [""],
+        language: [""],
+        publisher: [""],
+        relation: [""],
+        rights: [""],
+        source: [""],
+        subject: [""],
+        title: ["", Validators.required],
+        type: [""]
     });
 
     constructor(private apiService: ApiService, private fb: FormBuilder, private _router: Router) { }

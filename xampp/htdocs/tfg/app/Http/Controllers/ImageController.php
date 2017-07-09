@@ -125,7 +125,7 @@ class ImageController extends Controller
               'subject' => 'max:511',
               'description' => 'max:1023',
               'source' => 'max:255',
-              'language' => 'max:7',
+              'language' => 'max:255',
               'relation' => 'max:255',
               'coverage' => 'max:255',
               'creator' => 'max:255',

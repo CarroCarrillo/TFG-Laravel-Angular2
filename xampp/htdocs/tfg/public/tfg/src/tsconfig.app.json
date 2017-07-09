@@ -18,6 +18,6 @@
   "exclude": [
     "test.ts",
     "**/*.spec.ts",
-    "**/src/assets/**"
+    "src/assets/data/**/**/**"
   ]
 }
