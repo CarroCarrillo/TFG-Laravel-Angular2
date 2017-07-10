@@ -152,7 +152,7 @@ class ImageController extends Controller
         $image->contributor = $request->input('contributor');
         $image->rights = $request->input('rights');
         if($request->input('date'))
-            $image->date = $request->input('date');
+            $image->date = new DateTime($request->input('date'));
         $image->type = $request->input('type');
         $image->format = $request->input('format');
         $image->identifier = $request->input('identifier');

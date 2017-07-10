@@ -51,6 +51,8 @@ export class UploadImageComponent implements OnInit {
 
     onSubmit() {
         this.image = this.imageForm.value;
+        if(this.image.date) this.image.date = new Date(this.image.date);
+        console.log(this.image);
         let formData = new FormData();
         formData.append("file", this.file);
 
