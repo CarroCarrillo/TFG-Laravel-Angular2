@@ -24,8 +24,8 @@
       <a class="mdl-navigation__link cursor_hand" id="login-link" (click)="openLogin()">Iniciar sesión</a>
     </div>
     <div class="triangle" [class.open]="open"></div>
-    <div id="login-menu" [class.open]="open">
-      <login-form></login-form>
+    <div id="login-menu" [class.open]="open" [class.error]="error">
+      <login-form (errorEmitter)="setError($event)"></login-form>
     </div>
   </nav>
 </div>

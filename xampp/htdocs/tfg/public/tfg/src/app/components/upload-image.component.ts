@@ -14,6 +14,7 @@ import '../../../node_modules/tags-input/tags-input.js';
 export class UploadImageComponent implements OnInit {
     image: Image = new Image();
     file: File;
+    uploading: boolean;
 
     public imageForm = this.fb.group({
         contributor: [""],
@@ -35,7 +36,9 @@ export class UploadImageComponent implements OnInit {
 
     constructor(private apiService: ApiService, private fb: FormBuilder, private _router: Router) { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+        this.uploading = false;
+    }
 
     onChangeFile(image) {
         var fr = new FileReader();
@@ -50,6 +53,7 @@ export class UploadImageComponent implements OnInit {
     }
 
     onSubmit() {
+        this.uploading = true;
         this.image = this.imageForm.value;
         if(this.image.date) this.image.date = new Date(this.image.date);
         console.log(this.image);
@@ -63,8 +67,12 @@ export class UploadImageComponent implements OnInit {
                     console.log(image);
                     this._router.navigate(['/imagen', image.id]);
                     //TODO Ir a detalle
+                }).catch(erro => {
+                    this.uploading = false;
                 });
             }
+        }).catch(error => {
+            this.uploading = false;
         });
 
     }

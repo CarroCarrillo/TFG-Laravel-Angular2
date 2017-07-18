@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="mdl-textfield mdl-js-textfield">
-                            <label for="titleInput">Título</label>
+                            <label for="titleInput">Título *</label>
                             <input class="mdl-textfield__input form-control" placeholder="Introduce el título de la imagen" type="text" id="titleInput"
                             formControlName="title">
                         </div>
@@ -154,8 +154,12 @@
                 </div>
             </div>
 
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored center" [disabled]="imageForm.invalid ||!this.file">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored center" *ngIf="!uploading" [disabled]="imageForm.invalid ||!this.file">
             Subir
+            </button>
+
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored center" *ngIf="uploading" disabled>
+            Subiendo...
             </button>
 
         </form>

@@ -13,12 +13,15 @@ export class HeaderSimpleComponent implements OnInit {
     open: boolean = false;
     user: User;
     userSubscription: Subscription;
+    error: boolean;
 
     constructor(private api: ApiService) {
         this.user = api.user;
         this.userSubscription = api.userChanged$.subscribe(value => {
             this.user = value;
         });
+        
+        this.error = false;
     }
 
     ngOnInit() {
@@ -42,5 +45,9 @@ export class HeaderSimpleComponent implements OnInit {
         } else {
             return this.isChildOf(child.parentNode, parent);
         }
+    }
+
+    setError(ev){
+        this.error = ev;
     }
 }

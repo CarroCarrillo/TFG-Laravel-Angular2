@@ -9,6 +9,9 @@
         name="passwordLogin">
         <label class="mdl-textfield__label" for="passwordLogin">Contraseña</label>
     </div>
+    <div *ngIf="error" class="error">
+        Las credenciales son inválidas
+    </div>
     <button type="submit" *ngIf="!logging" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect wide-button">
           Iniciar sesión
     </button>

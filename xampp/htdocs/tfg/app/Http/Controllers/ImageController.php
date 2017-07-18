@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Image;
+use DateTime;
 
 class ImageController extends Controller
 {
@@ -152,7 +153,7 @@ class ImageController extends Controller
         $image->contributor = $request->input('contributor');
         $image->rights = $request->input('rights');
         if($request->input('date'))
-            $image->date = new DateTime($request->input('date'));
+            $image->date = (new DateTime($request->input('date')))->format("Y-m-d");
         $image->type = $request->input('type');
         $image->format = $request->input('format');
         $image->identifier = $request->input('identifier');

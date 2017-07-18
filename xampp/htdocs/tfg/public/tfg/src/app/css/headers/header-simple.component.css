@@ -45,3 +45,7 @@
 .mdl-layout__header-row{
     background-color: #bc251b;
 }
+
+.error{
+    height: 255px !important;
+}
