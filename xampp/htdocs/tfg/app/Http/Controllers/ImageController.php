@@ -317,8 +317,8 @@ class ImageController extends Controller
             $image->contributor = $request->input('contributor');
         if($request->has('rights'))
             $image->rights = $request->input('rights');
-        if($request->has('date'))
-            $image->date = $request->input('date');
+        if($request->input('date'))
+            $image->date = (new DateTime($request->input('date')))->format("Y-m-d");
         if($request->has('type'))
             $image->type = $request->input('type');
         if($request->has('format'))

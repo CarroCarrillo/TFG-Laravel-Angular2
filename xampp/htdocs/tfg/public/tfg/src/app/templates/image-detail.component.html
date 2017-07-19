@@ -32,10 +32,14 @@
                         {{subject}}
                         </span>
                     </li>
+                    <div *ngIf="subjects.length == 0" class="detail-info-field-value is-null">
+                        <span *ngIf="!value">Campo sin completar</span>
+                    </div>
                 </ul>
-                <div *ngIf="edition" class="mdl-textfield mdl-js-textfield">
+                <rl-tag-input *ngIf="edition" [(ngModel)]="subjects" id="subjectInput" placeholder="Introduce un nuevo tema"></rl-tag-input>
+                <!--<div *ngIf="edition" class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "3" id="textareaSubject" [(ngModel)]="image.subject"></textarea>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="row">

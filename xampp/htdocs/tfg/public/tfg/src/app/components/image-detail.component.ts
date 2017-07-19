@@ -21,6 +21,7 @@ export class ImageDetailComponent implements OnInit {
         this.route.data.subscribe((data: { image: Image }) => {
             this.image = data.image;
             if(this.image.subject) this.subjects = this.image.subject.split('/');
+            else this.subjects = new Array<string>();
         });
 
         this.edition = false;
@@ -40,7 +41,10 @@ export class ImageDetailComponent implements OnInit {
 
     saveEdition(){
         this.edition = false;
-        this.subjects = this.image.subject.split('/');
+        this.image.subject = this.subjects.join('/');
+        if(this.image.date) this.image.date = new Date(this.image.date);
+        else delete this.image.date;
+        console.log(this.image);
         this.api.updateImage(this.image).then(img => {
             
         });

@@ -15,6 +15,7 @@ export class UploadImageComponent implements OnInit {
     image: Image = new Image();
     file: File;
     uploading: boolean;
+    tags: string[];
 
     public imageForm = this.fb.group({
         contributor: [""],
@@ -29,7 +30,7 @@ export class UploadImageComponent implements OnInit {
         relation: [""],
         rights: [""],
         source: [""],
-        subject: [""],
+        subject: [ new Array<string>() ],
         title: ["", Validators.required],
         type: [""]
     });
@@ -38,6 +39,7 @@ export class UploadImageComponent implements OnInit {
 
     ngOnInit() { 
         this.uploading = false;
+        this.tags = new Array<string>();
     }
 
     onChangeFile(image) {
@@ -55,6 +57,7 @@ export class UploadImageComponent implements OnInit {
     onSubmit() {
         this.uploading = true;
         this.image = this.imageForm.value;
+        if(this.imageForm.value.subject) this.image.subject = this.imageForm.value.subject.join('/');
         if(this.image.date) this.image.date = new Date(this.image.date);
         console.log(this.image);
         let formData = new FormData();
