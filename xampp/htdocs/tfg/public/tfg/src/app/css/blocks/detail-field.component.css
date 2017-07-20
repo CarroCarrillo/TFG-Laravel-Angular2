@@ -15,3 +15,7 @@
 .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label{
     width: 100%;
 }
+
+.date{
+    padding: 20px 0;
+}

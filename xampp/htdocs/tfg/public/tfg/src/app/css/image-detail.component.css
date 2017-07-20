@@ -41,6 +41,8 @@ ul{
     right: 55px;
     top: 80px;
     z-index: 999;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 div.mdl-textfield.mdl-js-textfield{
@@ -50,4 +52,12 @@ div.mdl-textfield.mdl-js-textfield{
 
 .detail-info-field-value.is-null {
     color: #ccc;
+}
+
+rl-tag-input{
+    margin: 0 15px;
+}
+
+.mdl-grid{
+    z-index: 0;
 }
