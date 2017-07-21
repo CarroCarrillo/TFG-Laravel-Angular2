@@ -52,27 +52,34 @@ export class FinderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
-    this._types = ["images", "users"];
-
-    this._activatedRoute.queryParams.subscribe((queryParams: Params) => {
-      this._end = false;
-      this._hits = [];
-      this._query = decodeURI(queryParams['q']);
-      if(queryParams['q']) {
-        this._api.find({ q: queryParams['q'] }).then(result => {
-          if(result) {
-            if(result.hits.hits.length > 0) {
-              this._hits = this._hits.concat(result.hits.hits as Hit[]);
-              this._scroll = result._scroll_id;
-            } else {
-              this._scroll = null;
-              this._end = true;
+    if(!sessionStorage.getItem("is_reloaded")){
+      sessionStorage.setItem("is_reloaded", '1');
+      window.location.reload();
+    }
+    else{
+      sessionStorage.removeItem("is_reloaded");
+      this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
+      this._types = ["images", "users"];
+      
+      this._activatedRoute.queryParams.subscribe((queryParams: Params) => {
+        this._end = false;
+        this._hits = [];
+        this._query = decodeURI(queryParams['q']);
+        if(queryParams['q']) {
+          this._api.find({ q: queryParams['q'] }).then(result => {
+            if(result) {
+              if(result.hits.hits.length > 0) {
+                this._hits = this._hits.concat(result.hits.hits as Hit[]);
+                this._scroll = result._scroll_id;
+              } else {
+                this._scroll = null;
+                this._end = true;
+              }
             }
-          }
-        });
-      }
-    });
+          });
+        }
+      });
+    }
   }
 
   toggleImages()

@@ -62,3 +62,34 @@ a.no-underline{
   text-align: center;
   margin-top: 20px;
 }
+
+div.header_search h2{
+  margin-left: 185px;
+  display: inline-block;
+}
+
+div.header_search h3{
+  margin-left: 25px;
+  display: inline-block;
+}
+
+.mdl-switch.is-checked .mdl-switch__ripple-container {
+    left: 2px;
+}
+
+.mdl-switch__ripple-container {
+    position: absolute;
+    z-index: 2;
+    top: -12px;
+    left: -14px;
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(circle,#fff,#000);
+    transition-duration: .4s;
+    transition-timing-function: step-end;
+    transition-property: left;
+}

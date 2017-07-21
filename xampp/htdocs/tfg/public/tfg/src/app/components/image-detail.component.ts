@@ -44,7 +44,7 @@ export class ImageDetailComponent implements OnInit {
         this.image.subject = this.subjects.join('/');
         if(this.image.date) this.image.date = new Date(this.image.date);
         else delete this.image.date;
-        console.log(this.image);
+
         this.api.updateImage(this.image).then(img => {
             
         });
