@@ -6,3 +6,23 @@
     margin-top: 40px;
     margin-bottom: 40px
 }
+
+.mdl-cell--6-col{
+    width: calc(50% - 18px);
+}
+
+.mdl-card{
+    width: 500px;
+}
+
+.mdl-card__title{
+    background-color: #bc251b !important;
+}
+
+.error_validity{
+    color: #d50000;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}

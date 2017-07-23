@@ -1,3 +1,7 @@
 .mdl-layout__content{
     background-color: whitesmoke;
 }
+
+.mdl-layout__header{
+    background-color: #bc251b;
+}
