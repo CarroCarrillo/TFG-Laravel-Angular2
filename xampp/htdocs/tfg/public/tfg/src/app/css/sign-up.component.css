@@ -23,6 +23,15 @@
     color: #d50000;
     position: absolute;
     font-size: 12px;
-    margin-top: 3px;
     display: block;
+    margin-top: -33px;
+    padding-left: 8px;
+}
+
+.send-button{
+    margin-top: 16px;
+}
+
+#not_match{
+    margin-left: 217px;
 }

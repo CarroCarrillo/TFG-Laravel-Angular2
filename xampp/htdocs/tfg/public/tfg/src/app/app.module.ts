@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule }     from './app-routing.module';
 import { RlTagInputModule } from 'angular2-tag-input';
+import { MdlModule } from 'angular2-mdl';
 
 import { HeaderSimpleComponent } from './components/headers/header-simple.component';
 
@@ -50,7 +51,8 @@ import { UserResolver } from './services/resolvers/user-resolver.service';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    RlTagInputModule
+    RlTagInputModule,
+    MdlModule
   ],
   providers: [
     ApiService,
