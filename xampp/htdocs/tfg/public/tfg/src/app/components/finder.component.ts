@@ -52,12 +52,6 @@ export class FinderComponent implements OnInit {
    }
 
   ngOnInit() {
-    if(!sessionStorage.getItem("is_reloaded")){
-      sessionStorage.setItem("is_reloaded", '1');
-      window.location.reload();
-    }
-    else{
-      sessionStorage.removeItem("is_reloaded");
       this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
       this._types = ["images", "users"];
       
@@ -79,7 +73,6 @@ export class FinderComponent implements OnInit {
           });
         }
       });
-    }
   }
 
   toggleImages()

@@ -1,14 +1,19 @@
 <form (ngSubmit)="login()">
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
-        <input class="mdl-textfield__input" type="text" id="usernameLogin" [(ngModel)]="username"
-        name="usernameLogin" autofocus required>
-        <label class="mdl-textfield__label" for="usernameLogin">Nombre de usuario</label>
-    </div>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
-        <input class="mdl-textfield__input" type="password" id="passwordLogin" [(ngModel)]="password" required
-        name="passwordLogin">
-        <label class="mdl-textfield__label" for="passwordLogin">Contraseña</label>
-    </div>
+    <mdl-textfield
+        name="usernameLogin"
+        autofocus
+        required
+        type="text"
+        label="Nombre de usuario"
+        [(ngModel)]="username"
+        floating-label ></mdl-textfield>
+    <mdl-textfield
+        name="passwordLogin"
+        required
+        type="password"
+        label="Contraseña"
+        [(ngModel)]="password"
+        floating-label ></mdl-textfield>
     <div *ngIf="error" class="error">
         Las credenciales son inválidas
     </div>

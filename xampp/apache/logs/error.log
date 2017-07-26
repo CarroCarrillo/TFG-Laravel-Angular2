@@ -198,3 +198,52 @@ AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/
 [Mon Jul 24 11:57:14.793532 2017] [core:notice] [pid 4148:tid 668] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
 [Mon Jul 24 11:57:14.795875 2017] [mpm_winnt:notice] [pid 4148:tid 668] AH00418: Parent: Created child process 5172
 [Mon Jul 24 11:57:15.390406 2017] [mpm_winnt:notice] [pid 5172:tid 568] AH00354: Child: Starting 150 worker threads.
+[Tue Jul 25 10:23:27.602563 2017] [core:error] [pid 6268:tid 668] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:23:27.651949 2017] [core:warn] [pid 6268:tid 668] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Jul 25 10:23:28.012263 2017] [mpm_winnt:notice] [pid 6268:tid 668] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Tue Jul 25 10:23:28.012263 2017] [mpm_winnt:notice] [pid 6268:tid 668] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Tue Jul 25 10:23:28.012263 2017] [core:notice] [pid 6268:tid 668] AH00094: Command line: 'apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache -f conf\\httpd.conf'
+[Tue Jul 25 10:23:28.027888 2017] [mpm_winnt:notice] [pid 6268:tid 668] AH00418: Parent: Created child process 6040
+[Tue Jul 25 10:23:33.421923 2017] [core:error] [pid 6040:tid 668] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:23:38.176693 2017] [core:error] [pid 6040:tid 668] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:23:38.446584 2017] [mpm_winnt:notice] [pid 6268:tid 668] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Jul 25 10:23:38.477849 2017] [mpm_winnt:notice] [pid 6040:tid 668] AH00354: Child: Starting 150 worker threads.
+[Tue Jul 25 10:23:38.477849 2017] [mpm_winnt:error] [pid 6040:tid 1984] (OS 10038)Se intentó realizar una operación en un elemento que no es un socket.  : AH00332: winnt_accept: getsockname error on listening socket, is IPv6 available?
+[Tue Jul 25 10:23:38.477849 2017] [mpm_winnt:error] [pid 6040:tid 1988] (OS 10038)Se intentó realizar una operación en un elemento que no es un socket.  : AH00332: winnt_accept: getsockname error on listening socket, is IPv6 available?
+[Tue Jul 25 10:23:38.477849 2017] [mpm_winnt:error] [pid 6040:tid 1996] (OS 10038)Se intentó realizar una operación en un elemento que no es un socket.  : AH00332: winnt_accept: getsockname error on listening socket, is IPv6 available?
+[Tue Jul 25 10:23:38.477849 2017] [mpm_winnt:error] [pid 6040:tid 2000] (OS 10038)Se intentó realizar una operación en un elemento que no es un socket.  : AH00332: winnt_accept: getsockname error on listening socket, is IPv6 available?
+[Tue Jul 25 10:23:40.498133 2017] [mpm_winnt:notice] [pid 6040:tid 668] AH00364: Child: All worker threads have exited.
+[Tue Jul 25 10:23:40.534745 2017] [mpm_winnt:notice] [pid 6268:tid 668] AH00430: Parent: Child process 6040 exited successfully.
+[Tue Jul 25 10:24:13.487563 2017] [core:error] [pid 9200:tid 624] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:24:13.734957 2017] [mpm_winnt:notice] [pid 9200:tid 624] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Tue Jul 25 10:24:13.734957 2017] [mpm_winnt:notice] [pid 9200:tid 624] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Tue Jul 25 10:24:13.734957 2017] [core:notice] [pid 9200:tid 624] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Tue Jul 25 10:24:13.734957 2017] [mpm_winnt:notice] [pid 9200:tid 624] AH00418: Parent: Created child process 4076
+[Tue Jul 25 10:24:19.061348 2017] [core:error] [pid 4076:tid 640] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:24:23.806823 2017] [core:error] [pid 4076:tid 640] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Tue Jul 25 10:24:24.036922 2017] [mpm_winnt:notice] [pid 4076:tid 640] AH00354: Child: Starting 150 worker threads.
+[Wed Jul 26 13:45:00.689245 2017] [core:error] [pid 4852:tid 496] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Wed Jul 26 13:45:00.826816 2017] [core:warn] [pid 4852:tid 496] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jul 26 13:45:02.059795 2017] [mpm_winnt:notice] [pid 4852:tid 496] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Wed Jul 26 13:45:02.059795 2017] [mpm_winnt:notice] [pid 4852:tid 496] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Wed Jul 26 13:45:02.059795 2017] [core:notice] [pid 4852:tid 496] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Wed Jul 26 13:45:02.075393 2017] [mpm_winnt:notice] [pid 4852:tid 496] AH00418: Parent: Created child process 5796
+[Wed Jul 26 13:45:07.399094 2017] [core:error] [pid 5796:tid 640] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Wed Jul 26 13:45:12.244746 2017] [core:error] [pid 5796:tid 640] (EAI 11001)APR does not understand this error code: AH00549: Failed to resolve server name for 127.0.53.53 (check DNS) -- or specify an explicit ServerName
+[Wed Jul 26 13:45:12.583444 2017] [mpm_winnt:notice] [pid 5796:tid 640] AH00354: Child: Starting 150 worker threads.
+[Wed Jul 26 13:56:44.090897 2017] [core:warn] [pid 9800:tid 660] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jul 26 13:56:44.292747 2017] [mpm_winnt:notice] [pid 9800:tid 660] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Wed Jul 26 13:56:44.292747 2017] [mpm_winnt:notice] [pid 9800:tid 660] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Wed Jul 26 13:56:44.292747 2017] [core:notice] [pid 9800:tid 660] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Wed Jul 26 13:56:44.294749 2017] [mpm_winnt:notice] [pid 9800:tid 660] AH00418: Parent: Created child process 1568
+[Wed Jul 26 13:56:45.657473 2017] [mpm_winnt:notice] [pid 1568:tid 664] AH00354: Child: Starting 150 worker threads.
+[Wed Jul 26 13:56:53.337683 2017] [php7:warn] [pid 1568:tid 1968] [client 127.0.0.1:51975] PHP Warning:  require(C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\bootstrap\\autoload.php on line 17, referer: http://localhost:4200/
+[Wed Jul 26 13:56:53.338184 2017] [php7:error] [pid 1568:tid 1968] [client 127.0.0.1:51975] PHP Fatal error:  require(): Failed opening required 'C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\bootstrap/../vendor/autoload.php' (include_path='C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\php\\PEAR') in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\bootstrap\\autoload.php on line 17, referer: http://localhost:4200/
+[Wed Jul 26 19:10:54.330080 2017] [core:warn] [pid 6824:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jul 26 19:10:55.216960 2017] [mpm_winnt:notice] [pid 6824:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Wed Jul 26 19:10:55.216960 2017] [mpm_winnt:notice] [pid 6824:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Wed Jul 26 19:10:55.216960 2017] [core:notice] [pid 6824:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Wed Jul 26 19:10:55.216960 2017] [mpm_winnt:notice] [pid 6824:tid 656] AH00418: Parent: Created child process 3752
+[Wed Jul 26 19:10:56.419269 2017] [mpm_winnt:notice] [pid 3752:tid 672] AH00354: Child: Starting 150 worker threads.
+[Wed Jul 26 20:36:15.546673 2017] [php7:error] [pid 3752:tid 1968] [client 127.0.0.1:62277] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php on line 8, referer: http://localhost:4200/
+[Wed Jul 26 20:36:15.546673 2017] [php7:error] [pid 3752:tid 1964] [client 127.0.0.1:62276] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php on line 8, referer: http://localhost:4200/
