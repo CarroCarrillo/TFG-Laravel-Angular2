@@ -5,95 +5,70 @@
 <div class="mdl-grid">
     <div class="col-md-2 panel-left">
         <div class="filter_group">
-            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-images">
-            <input type="checkbox" id="switch-images" class="mdl-switch__input" (click)="toggleImages()" checked>
-            <span class="mdl-switch__label">Imágenes</span>
-            </label>
+            <mdl-switch mdl-ripple (click)="toggleImages()" [(ngModel)]="_boolFields[0]">Imágenes</mdl-switch>
             <div class="close" [@openPanel]="_imagesState">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-title">
-                <input type="checkbox" id="checkbox-title" class="mdl-checkbox__input" (change)="toggle(_fields, 'title')" checked>
-                <span class="mdl-checkbox__label">Título</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-subject">
-                <input type="checkbox" id="checkbox-subject" class="mdl-checkbox__input" (change)="toggle(_fields, 'subject')" checked>
-                <span class="mdl-checkbox__label">Temas</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-description">
-                <input type="checkbox" id="checkbox-description" class="mdl-checkbox__input" (change)="toggle(_fields, 'description')" checked>
-                <span class="mdl-checkbox__label">Descripción</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-source">
-                <input type="checkbox" id="checkbox-source" class="mdl-checkbox__input" (change)="toggle(_fields, 'source')" checked>
-                <span class="mdl-checkbox__label">Fuente</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-language">
-                <input type="checkbox" id="checkbox-language" class="mdl-checkbox__input" (change)="toggle(_fields, 'language')" checked>
-                <span class="mdl-checkbox__label">Idioma</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-relation">
-                <input type="checkbox" id="checkbox-relation" class="mdl-checkbox__input" (change)="toggle(_fields, 'relation')" checked>
-                <span class="mdl-checkbox__label">Relación</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-coverage">
-                <input type="checkbox" id="checkbox-coverage" class="mdl-checkbox__input" (change)="toggle(_fields, 'coverage')" checked>
-                <span class="mdl-checkbox__label">Cobertura</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-creator">
-                <input type="checkbox" id="checkbox-creator" class="mdl-checkbox__input" (change)="toggle(_fields, 'creator')" checked>
-                <span class="mdl-checkbox__label">Creador</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-contributor">
-                <input type="checkbox" id="checkbox-contributor" class="mdl-checkbox__input" (change)="toggle(_fields, 'contributor')" checked>
-                <span class="mdl-checkbox__label">Contribuidor</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-publisher">
-                <input type="checkbox" id="checkbox-publisher" class="mdl-checkbox__input" (change)="toggle(_fields, 'publisher')" checked>
-                <span class="mdl-checkbox__label">Publicador</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-rights">
-                <input type="checkbox" id="checkbox-rights" class="mdl-checkbox__input" (change)="toggle(_fields, 'rights')" checked>
-                <span class="mdl-checkbox__label">Derechos</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-date">
-                <input type="checkbox" id="checkbox-date" class="mdl-checkbox__input" (change)="toggle(_fields, 'date')" checked>
-                <span class="mdl-checkbox__label">Fecha</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-type">
-                <input type="checkbox" id="checkbox-type" class="mdl-checkbox__input" (change)="toggle(_fields, 'type')" checked>
-                <span class="mdl-checkbox__label">Tipo</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-format">
-                <input type="checkbox" id="checkbox-format" class="mdl-checkbox__input" (change)="toggle(_fields, 'format')" checked>
-                <span class="mdl-checkbox__label">Formato</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-identifier">
-                <input type="checkbox" id="checkbox-identifier" class="mdl-checkbox__input" (change)="toggle(_fields, 'identifier')" checked>
-                <span class="mdl-checkbox__label">Identificador</span>
-                </label>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'title')" [(ngModel)]="_boolFields[1]">
+                    Título
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'subject')" [(ngModel)]="_boolFields[2]">
+                    Temas
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'description')" [(ngModel)]="_boolFields[3]">
+                    Descripción
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'source')" [(ngModel)]="_boolFields[4]">
+                    Fuente
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'language')" [(ngModel)]="_boolFields[5]">
+                    Idioma
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'relation')" [(ngModel)]="_boolFields[6]">
+                    Relación
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'coverage')" [(ngModel)]="_boolFields[7]">
+                    Cobertura
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'creator')" [(ngModel)]="_boolFields[8]">
+                    Creador
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'contributor')" [(ngModel)]="_boolFields[9]">
+                    Contribuidor
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'publisher')" [(ngModel)]="_boolFields[10]">
+                    Publicador
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'rights')" [(ngModel)]="_boolFields[11]">
+                    Derechos
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'date')" [(ngModel)]="_boolFields[12]">
+                    Fecha
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'type')" [(ngModel)]="_boolFields[13]">
+                    Tipo
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'format')" [(ngModel)]="_boolFields[14]">
+                    Formato
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'identifier')" [(ngModel)]="_boolFields[15]">
+                    Identificador
+                </mdl-checkbox>
             </div>
         </div>
         <div class="filter_group">
-            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-users">
-            <input type="checkbox" id="switch-users" class="mdl-switch__input" (click)="toggleUsers()" checked>
-            <span class="mdl-switch__label">Usuarios</span>
-            </label>
+            <mdl-switch mdl-ripple (click)="toggleUsers()" [(ngModel)]="_boolFields[16]">Usuarios</mdl-switch>
             <div class="close" [@openPanelSmall]="_usersState">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-name">
-                <input type="checkbox" id="checkbox-name" class="mdl-checkbox__input" (change)="toggle(_fields, 'name')" checked>
-                <span class="mdl-checkbox__label">Nombre</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-surname">
-                <input type="checkbox" id="checkbox-surname" class="mdl-checkbox__input" (change)="toggle(_fields, 'surname')" checked>
-                <span class="mdl-checkbox__label">Apellidos</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-username">
-                <input type="checkbox" id="checkbox-username" class="mdl-checkbox__input" (change)="toggle(_fields, 'username')" checked>
-                <span class="mdl-checkbox__label">Nombre de usuario</span>
-                </label>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-email">
-                <input type="checkbox" id="checkbox-email" class="mdl-checkbox__input" (change)="toggle(_fields, 'email')" checked>
-                <span class="mdl-checkbox__label">Correo electrónico</span>
-                </label>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'name')" [(ngModel)]="_boolFields[17]">
+                    Nombre
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'surname')" [(ngModel)]="_boolFields[18]">
+                    Apellidos
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'username')" [(ngModel)]="_boolFields[19]">
+                    Nombre de usuario
+                </mdl-checkbox>
+                <mdl-checkbox [mdl-ripple]="true" (change)="toggle(_fields, 'email')" [(ngModel)]="_boolFields[20]">
+                    Correo electrónico
+                </mdl-checkbox>
             </div>
         </div>
     </div>

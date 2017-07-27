@@ -93,3 +93,7 @@ div.header_search h3{
     transition-timing-function: step-end;
     transition-property: left;
 }
+
+mdl-switch{
+  font-weight: bold;
+}

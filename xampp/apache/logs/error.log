@@ -247,3 +247,22 @@ AH00112: Warning: DocumentRoot [C:/Users/Usuario/Documents/TFG-Laravel-Angular2/
 [Wed Jul 26 19:10:56.419269 2017] [mpm_winnt:notice] [pid 3752:tid 672] AH00354: Child: Starting 150 worker threads.
 [Wed Jul 26 20:36:15.546673 2017] [php7:error] [pid 3752:tid 1968] [client 127.0.0.1:62277] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php on line 8, referer: http://localhost:4200/
 [Wed Jul 26 20:36:15.546673 2017] [php7:error] [pid 3752:tid 1964] [client 127.0.0.1:62276] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php on line 8, referer: http://localhost:4200/
+[Thu Jul 27 12:39:59.116034 2017] [core:warn] [pid 7532:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jul 27 12:39:59.955098 2017] [mpm_winnt:notice] [pid 7532:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Thu Jul 27 12:39:59.955098 2017] [mpm_winnt:notice] [pid 7532:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Thu Jul 27 12:39:59.955098 2017] [core:notice] [pid 7532:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Thu Jul 27 12:39:59.955098 2017] [mpm_winnt:notice] [pid 7532:tid 656] AH00418: Parent: Created child process 3452
+[Thu Jul 27 12:40:01.374889 2017] [mpm_winnt:notice] [pid 3452:tid 668] AH00354: Child: Starting 150 worker threads.
+[Thu Jul 27 12:41:51.937187 2017] [php7:error] [pid 3452:tid 1968] [client 127.0.0.1:49965] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Config\\Repository.php on line 5, referer: http://localhost:4200/
+[Thu Jul 27 13:12:45.968953 2017] [core:warn] [pid 3260:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jul 27 13:12:46.168551 2017] [mpm_winnt:notice] [pid 3260:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Thu Jul 27 13:12:46.168551 2017] [mpm_winnt:notice] [pid 3260:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Thu Jul 27 13:12:46.168551 2017] [core:notice] [pid 3260:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Thu Jul 27 13:12:46.168551 2017] [mpm_winnt:notice] [pid 3260:tid 656] AH00418: Parent: Created child process 4024
+[Thu Jul 27 13:12:47.500550 2017] [mpm_winnt:notice] [pid 4024:tid 664] AH00354: Child: Starting 150 worker threads.
+[Thu Jul 27 13:14:00.221218 2017] [core:warn] [pid 7148:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jul 27 13:14:00.837146 2017] [mpm_winnt:notice] [pid 7148:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Thu Jul 27 13:14:00.837146 2017] [mpm_winnt:notice] [pid 7148:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Thu Jul 27 13:14:00.837146 2017] [core:notice] [pid 7148:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Thu Jul 27 13:14:00.837146 2017] [mpm_winnt:notice] [pid 7148:tid 656] AH00418: Parent: Created child process 7840
+[Thu Jul 27 13:14:02.324759 2017] [mpm_winnt:notice] [pid 7840:tid 664] AH00354: Child: Starting 150 worker threads.

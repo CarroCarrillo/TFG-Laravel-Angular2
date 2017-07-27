@@ -14,7 +14,7 @@ import { Hit } from '../models/hit';
                 height: '0'
             })),
             state('active', style({
-                height: '365px'
+                height: '375px'
             })),
             transition('inactive => active', animate('1000ms ease-in')),
             transition('active => inactive', animate('1000ms ease-out'))
@@ -40,6 +40,7 @@ export class FinderComponent implements OnInit {
   private _usersState: string;
   private _fields: Array<string>;
   private _types: Array<string>;
+  private _boolFields: Array<boolean>;
 
   private _activatedRoute: ActivatedRoute;
   private _api: ApiService;
@@ -49,11 +50,16 @@ export class FinderComponent implements OnInit {
     this._api = api;
     this._imagesState = "active";
     this._usersState = "active";
+    this._boolFields= new Array<boolean>(21);
    }
 
   ngOnInit() {
       this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
       this._types = ["images", "users"];
+
+      for(let i = 0; i < this._boolFields.length; i++){
+        this._boolFields[i] = true;
+      }
       
       this._activatedRoute.queryParams.subscribe((queryParams: Params) => {
         this._end = false;
