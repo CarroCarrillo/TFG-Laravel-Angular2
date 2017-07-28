@@ -62,3 +62,6 @@ rl-tag-input{
     z-index: 0;
     margin-top: 16px;
 }
+.download_buttons{
+    margin: 30px 0;
+}

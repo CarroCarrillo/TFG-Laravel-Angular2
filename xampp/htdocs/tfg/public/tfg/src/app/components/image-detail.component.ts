@@ -49,4 +49,18 @@ export class ImageDetailComponent implements OnInit {
             
         });
     }
+
+    downloadDC(){
+        console.log("Descargar como DC");
+        this.api.downloadDC(this.image.id).then(img => {
+
+        });
+    }
+
+    downloadRDF(){
+        console.log("Descargar como RDF");
+        this.api.downloadRDF(this.image.id).then(img => {
+
+        });
+    }
 }

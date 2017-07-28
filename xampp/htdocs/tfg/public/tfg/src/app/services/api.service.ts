@@ -250,4 +250,26 @@ export class ApiService {
             this.handleError(error as Error);
         });
     }
+
+    downloadDC(id): Promise<any>
+    {
+        return this.apiCall('GET', 'file/' + id, {
+            type: 'dc'
+        }).then(result => {
+            console.log(result);
+        }).catch(error => {
+            this.handleError(error as Error);
+        });
+    }
+
+    downloadRDF(id): Promise<any>
+    {
+        return this.apiCall('GET', 'file/' + id, {
+            type: 'rdf'
+        }).then(result => {
+            console.log(result);
+        }).catch(error => {
+            this.handleError(error as Error);
+        });
+    }
 }

@@ -62,9 +62,23 @@ class FileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    /**
+    * @api {get} /file Recupera un archivo DC/XML o RDF
+    * @apiVersion 1.0.0
+    * @apiName GetFile
+    * @apiGroup File
+    *
+    * @apiParam {Number} id  ID de la imagen a descargar como Dublin Core.
+    * @apiParam {String} type  Indica si se descargará como DC/XML o RDF.
+    *
+    * @apiSuccess {File} file Archivo con la información Dublin Core.
+    */
+    public function download(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+          'type' => 'required|in:dc,rdf'
+        ]);
     }
 
     /**

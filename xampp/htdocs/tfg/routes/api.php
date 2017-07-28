@@ -43,6 +43,7 @@ Route::group(['prefix' => 'v1'], function () {
     //ARCHIVOS
     Route::group(['middleware'=>'auth:api'], function(){
         Route::post('file', 'FileController@store');
+        Route::get('file/{id}', 'FileController@download');
     });
 
     //BUSACADOR
