@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Image } from 'app/models/image';
+import * as FileSaver from 'file-saver';
 
 @Component({
     selector: 'image-detail',
@@ -51,16 +52,16 @@ export class ImageDetailComponent implements OnInit {
     }
 
     downloadDC(){
-        console.log("Descargar como DC");
-        this.api.downloadDC(this.image.id).then(img => {
-
+        this.api.downloadDC(this.image.id).then(dc => {
+            let blob = new Blob([dc._body], {type: 'application/xml'});
+            FileSaver.saveAs(blob, this.image.title + ".xml");
         });
     }
 
     downloadRDF(){
-        console.log("Descargar como RDF");
-        this.api.downloadRDF(this.image.id).then(img => {
-
+        this.api.downloadRDF(this.image.id).then(rdf => {
+            let blob = new Blob([rdf._body], {type: 'application/rdf'});
+            FileSaver.saveAs(blob, this.image.title + ".rdf");
         });
     }
 }

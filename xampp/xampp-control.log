@@ -513,3 +513,25 @@
 21:07:40  [main] 	Deinitializing Modules
 21:07:40  [main] 	Deinitializing Control Panel
 
+11:47:14  [main] 	Initializing Control Panel
+11:47:14  [main] 	Windows Version:  Education  64-bit
+11:47:14  [main] 	XAMPP Version: 7.1.1
+11:47:14  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+11:47:14  [main] 	You are not running with administrator rights! This will work for
+11:47:14  [main] 	most application stuff but whenever you do something with services
+11:47:14  [main] 	there will be a security dialogue or things will break! So think 
+11:47:14  [main] 	about running this application with administrator rights!
+11:47:14  [main] 	XAMPP Installation Directory: "c:\users\daniel\documents\tfg-laravel-angular2\xampp\"
+11:47:14  [main] 	Checking for prerequisites
+11:47:15  [main] 	All prerequisites found
+11:47:15  [main] 	Initializing Modules
+11:47:15  [main] 	Starting Check-Timer
+11:47:15  [main] 	Control Panel Ready
+11:47:17  [Apache] 	Attempting to start Apache app...
+11:47:17  [Apache] 	Status change detected: running
+14:00:41  [Apache] 	Attempting to stop Apache (PID: 5028)
+14:00:41  [Apache] 	Attempting to stop Apache (PID: 3724)
+14:00:42  [Apache] 	Status change detected: stopped
+14:43:19  [main] 	Deinitializing Modules
+14:43:19  [main] 	Deinitializing Control Panel
+

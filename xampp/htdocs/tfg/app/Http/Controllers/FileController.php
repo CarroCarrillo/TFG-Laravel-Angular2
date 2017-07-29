@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Image;
 
 class FileController extends Controller
 {
@@ -79,6 +80,25 @@ class FileController extends Controller
         $this->validate($request, [
           'type' => 'required|in:dc,rdf'
         ]);
+
+        $type = $request->input('type');
+        $image = Image::findOrFail($id);
+        $file;
+        if($type == 'dc')
+        { 
+            $file = storage_path() . "\\app\\$image->id.xml";
+            $this->generateDC($file, $image);
+        }
+        else{
+            $file = storage_path() . "\\app\\$image->id.rdf";
+            $this->generateRDF($file, $image);
+        }
+
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $content_type = finfo_file($finfo, $file);
+        $headers[] = header("Content-Type: $content_type");
+          
+        return response()->download($file);
     }
 
     /**
@@ -113,5 +133,35 @@ class FileController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function generateDC($file_name, $image)
+    {
+        $file = fopen($file_name, "w+b");
+        
+        if ($file == false) {
+            echo "Error al crear el archivo";
+        } else {
+            //Escribir en el archivo:
+            fwrite($file, "<?xml version='1.0'?>\n
+<metadata
+xmlns='http://example.org/myapp/'
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='http://example.org/myapp/ http://example.org/myapp/schema.xsd'
+xmlns:dc='http://purl.org/dc/elements/1.1/'>\n");
+
+            if($image->title) fwrite($file, "<dc:title>$image->title</dc:title>");
+          
+            fwrite($file, "\n</metadata>");
+            //Fuerza a que se escriban los datos pendientes en el buffer:
+            fflush($file);
+        }
+        // Cerrar el archivo:
+        fclose($file);    
+    }
+
+    private function generateRDF($id)
+    {
+
     }
 }

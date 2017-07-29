@@ -256,7 +256,7 @@ export class ApiService {
         return this.apiCall('GET', 'file/' + id, {
             type: 'dc'
         }).then(result => {
-            console.log(result);
+            return result;
         }).catch(error => {
             this.handleError(error as Error);
         });
@@ -267,7 +267,7 @@ export class ApiService {
         return this.apiCall('GET', 'file/' + id, {
             type: 'rdf'
         }).then(result => {
-            console.log(result);
+            return result;
         }).catch(error => {
             this.handleError(error as Error);
         });
