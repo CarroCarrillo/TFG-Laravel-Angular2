@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Image } from 'app/models/image';
+import { User } from 'app/models/user';
 import * as FileSaver from 'file-saver';
 
 @Component({
@@ -15,8 +16,11 @@ export class ImageDetailComponent implements OnInit {
     auxImage: Image;
     subjects: string[];
     edition: boolean;
+    user: User;
 
-    constructor(private router: Router, private route: ActivatedRoute, private api: ApiService) { }
+    constructor(private router: Router, private route: ActivatedRoute, private api: ApiService) { 
+        this.user = this.api.user;
+    }
 
     ngOnInit() {
         this.route.data.subscribe((data: { image: Image }) => {

@@ -108,7 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="download_buttons">
+    <div *ngIf="user" class="download_buttons">
         <button mdl-button mdl-button-type="raised" mdl-colored="accent" mdl-ripple (click)="downloadDC()">
             Descargar como DC/XML
         </button>

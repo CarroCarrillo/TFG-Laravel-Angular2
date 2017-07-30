@@ -143,16 +143,29 @@ class FileController extends Controller
             echo "Error al crear el archivo";
         } else {
             //Escribir en el archivo:
-            fwrite($file, "<?xml version='1.0'?>\n
-<metadata
-xmlns='http://example.org/myapp/'
-xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-xsi:schemaLocation='http://example.org/myapp/ http://example.org/myapp/schema.xsd'
-xmlns:dc='http://purl.org/dc/elements/1.1/'>\n");
+            fwrite($file, "<?xml version='1.0'?>\n\n");
+            fwrite($file, "<metadata\n");
+            fwrite($file, "xmlns='http://example.org/myapp/'\n");
+            fwrite($file, "xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'\n");
+            fwrite($file, "xsi:schemaLocation='http://example.org/myapp/ http://example.org/myapp/schema.xsd'\n");
+            fwrite($file, "xmlns:dc='http://purl.org/dc/elements/1.1/'>\n");
 
-            if($image->title) fwrite($file, "<dc:title>$image->title</dc:title>");
+            if($image->title) fwrite($file, "\n<dc:title>$image->title</dc:title>");
+            if($image->subject) fwrite($file, "\n<dc:subject>$image->subject</dc:subject>");
+            if($image->description) fwrite($file, "\n<dc:description>$image->description</dc:description>");
+            if($image->source) fwrite($file, "\n<dc:source>$image->source</dc:source>");
+            if($image->creator) fwrite($file, "\n<dc:creator>$image->creator</dc:creator>");
+            if($image->contributor) fwrite($file, "\n<dc:contributor>$image->contributor</dc:contributor>");
+            if($image->publisher) fwrite($file, "\n<dc:publisher>$image->publisher</dc:publisher>");
+            if($image->language) fwrite($file, "\n<dc:language>$image->language</dc:language>");
+            if($image->relation) fwrite($file, "\n<dc:relation>$image->relation</dc:relation>");
+            if($image->coverage) fwrite($file, "\n<dc:coverage>$image->coverage</dc:coverage>");
+            if($image->date) fwrite($file, "\n<dc:date>$image->date</dc:date>");
+            if($image->type) fwrite($file, "\n<dc:type>$image->type</dc:type>");
+            if($image->format) fwrite($file, "\n<dc:format>$image->format</dc:format>");
+            if($image->identifier) fwrite($file, "\n<dc:identifier>$image->identifier</dc:identifier>");
           
-            fwrite($file, "\n</metadata>");
+            fwrite($file, "\n\n</metadata>");
             //Fuerza a que se escriban los datos pendientes en el buffer:
             fflush($file);
         }
@@ -160,8 +173,42 @@ xmlns:dc='http://purl.org/dc/elements/1.1/'>\n");
         fclose($file);    
     }
 
-    private function generateRDF($id)
+    private function generateRDF($file_name, $image)
     {
+        $file = fopen($file_name, "w+b");
+        
+        if ($file == false) {
+            echo "Error al crear el archivo";
+        } else {
+            //Escribir en el archivo:
+            fwrite($file, "<rdf:RDF\n");
+            fwrite($file, "  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'\n");
+            fwrite($file, "  xmlns:dc='http://purl.org/dc/elements/1.1/'>\n");
+            fwrite($file, "<rdf:Description");
+            if($image->source) fwrite($file, " rdf:about='$image->source'>\n");
+            else fwrite($file, ">\n");
 
+            if($image->title) fwrite($file, "\n  <dc:title>$image->title</dc:title>");
+            if($image->subject) fwrite($file, "\n  <dc:subject>$image->subject</dc:subject>");
+            if($image->description) fwrite($file, "\n  <dc:description>$image->description</dc:description>");
+            if($image->source) fwrite($file, "\n  <dc:source>$image->source</dc:source>");
+            if($image->creator) fwrite($file, "\n  <dc:creator>$image->creator</dc:creator>");
+            if($image->contributor) fwrite($file, "\n  <dc:contributor>$image->contributor</dc:contributor>");
+            if($image->publisher) fwrite($file, "\n  <dc:publisher>$image->publisher</dc:publisher>");
+            if($image->language) fwrite($file, "\n  <dc:language>$image->language</dc:language>");
+            if($image->relation) fwrite($file, "\n  <dc:relation>$image->relation</dc:relation>");
+            if($image->coverage) fwrite($file, "\n  <dc:coverage>$image->coverage</dc:coverage>");
+            if($image->date) fwrite($file, "\n  <dc:date>$image->date</dc:date>");
+            if($image->type) fwrite($file, "\n  <dc:type>$image->type</dc:type>");
+            if($image->format) fwrite($file, "\n  <dc:format>$image->format</dc:format>");
+            if($image->identifier) fwrite($file, "\n  <dc:identifier>$image->identifier</dc:identifier>");
+          
+            fwrite($file, "\n\n</rdf:Description>");
+            fwrite($file, "\n</rdf:RDF>");
+            //Fuerza a que se escriban los datos pendientes en el buffer:
+            fflush($file);
+        }
+        // Cerrar el archivo:
+        fclose($file); 
     }
 }

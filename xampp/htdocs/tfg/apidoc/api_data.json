@@ -1,5 +1,48 @@
 [
   {
+    "type": "get",
+    "url": "/file",
+    "title": "Recupera un archivo DC/XML o RDF",
+    "version": "1.0.0",
+    "name": "GetFile",
+    "group": "File",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID de la imagen a descargar como Dublin Core.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>Indica si se descargará como DC/XML o RDF.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "File",
+            "optional": false,
+            "field": "file",
+            "description": "<p>Archivo con la información Dublin Core.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "app/Http/Controllers/FileController.php",
+    "groupTitle": "File"
+  },
+  {
     "type": "post",
     "url": "/file",
     "title": "Almacena un nuevo archivo",
