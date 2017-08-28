@@ -17,17 +17,20 @@ export class UserProfileComponent implements OnInit {
     private _edit: boolean;
     private _saving: boolean;
     private _file: File;
+    private _page: number;
     @ViewChild("newImageProfile") _inputFile: ElementRef;
     @ViewChild("imgProfile") _imgProfile: ElementRef;
 
-    constructor(private _router: Router, private _route: ActivatedRoute, private _api: ApiService) { }
+    constructor(private _router: Router, private _route: ActivatedRoute, private _api: ApiService) {
+        this._page = 0;
+     }
 
     ngOnInit() {
         this._route.data.subscribe((data: { user: User }) => {
             this._user = data.user;
         });
 
-        this._api.getUserImages(this._user.id).then(res => {
+        this._api.getUserImages(this._user.id, { page: this._page }).then(res => {
             this._images = res;
         });
 
@@ -94,5 +97,18 @@ export class UserProfileComponent implements OnInit {
 
         fr.readAsDataURL(image);
         this._file = image;
+    }
+
+    onScroll(event)
+    {
+        let target = event.target;
+        if(target.scrollTop + 1 >= target.scrollHeight - target.clientHeight) {
+            this._page++;
+            this._api.getLastImages({ page: this._page }).then(res => {
+                if (res) {
+                    this._images = this._images.concat(res);
+                }
+            });
+        }
     }
 }

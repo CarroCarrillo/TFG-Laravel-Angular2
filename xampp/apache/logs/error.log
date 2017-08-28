@@ -285,3 +285,28 @@ La sintaxis del comando no es correcta.
 [Sun Jul 30 11:48:20.084329 2017] [core:notice] [pid 8660:tid 672] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
 [Sun Jul 30 11:48:20.086319 2017] [mpm_winnt:notice] [pid 8660:tid 672] AH00418: Parent: Created child process 9380
 [Sun Jul 30 11:48:20.751940 2017] [mpm_winnt:notice] [pid 9380:tid 668] AH00354: Child: Starting 150 worker threads.
+[Fri Aug 04 17:53:52.532201 2017] [core:warn] [pid 9732:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Aug 04 17:53:53.844732 2017] [mpm_winnt:notice] [pid 9732:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Fri Aug 04 17:53:53.844732 2017] [mpm_winnt:notice] [pid 9732:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Fri Aug 04 17:53:53.844732 2017] [core:notice] [pid 9732:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Fri Aug 04 17:53:53.844732 2017] [mpm_winnt:notice] [pid 9732:tid 656] AH00418: Parent: Created child process 756
+[Fri Aug 04 17:53:55.282238 2017] [mpm_winnt:notice] [pid 756:tid 668] AH00354: Child: Starting 150 worker threads.
+[Mon Aug 28 02:02:09.591342 2017] [core:warn] [pid 4764:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Aug 28 02:02:10.984660 2017] [mpm_winnt:notice] [pid 4764:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Mon Aug 28 02:02:10.984660 2017] [mpm_winnt:notice] [pid 4764:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Mon Aug 28 02:02:10.984660 2017] [core:notice] [pid 4764:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Mon Aug 28 02:02:10.992168 2017] [mpm_winnt:notice] [pid 4764:tid 656] AH00418: Parent: Created child process 8980
+[Mon Aug 28 02:02:12.478580 2017] [mpm_winnt:notice] [pid 8980:tid 664] AH00354: Child: Starting 150 worker threads.
+[Mon Aug 28 13:07:40.062734 2017] [core:warn] [pid 6388:tid 656] AH00098: pid file C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Aug 28 13:07:41.481470 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Mon Aug 28 13:07:41.481470 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Mon Aug 28 13:07:41.481470 2017] [core:notice] [pid 6388:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Mon Aug 28 13:07:41.481470 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00418: Parent: Created child process 6664
+[Mon Aug 28 13:07:42.899817 2017] [mpm_winnt:notice] [pid 6664:tid 668] AH00354: Child: Starting 150 worker threads.
+[Mon Aug 28 13:30:05.397392 2017] [php7:error] [pid 6664:tid 1964] [client 127.0.0.1:55516] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Daniel\\Documents\\TFG-Laravel-Angular2\\xampp\\htdocs\\tfg\\vendor\\barryvdh\\laravel-cors\\src\\ServiceProvider.php on line 6, referer: http://localhost:4200/
+[Mon Aug 28 13:30:05.574057 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00428: Parent: child process 6664 exited with status 3221226356 -- Restarting.
+[Mon Aug 28 13:30:08.335177 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Mon Aug 28 13:30:08.335177 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00456: Apache Lounge VC14 Server built: Dec 17 2016 10:42:52
+[Mon Aug 28 13:30:08.335177 2017] [core:notice] [pid 6388:tid 656] AH00094: Command line: 'c:\\users\\daniel\\documents\\tfg-laravel-angular2\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Daniel/Documents/TFG-Laravel-Angular2/xampp/apache'
+[Mon Aug 28 13:30:08.371965 2017] [mpm_winnt:notice] [pid 6388:tid 656] AH00418: Parent: Created child process 7852
+[Mon Aug 28 13:30:10.196196 2017] [mpm_winnt:notice] [pid 7852:tid 668] AH00354: Child: Starting 150 worker threads.

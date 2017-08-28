@@ -282,7 +282,19 @@ class UserController extends Controller
     * @apiSuccess {Date} image.updated_at  Fecha de última modificación del contenido de la imagen.
     */
     public function images(Request $request, $id){
+
+        //Validación de los parámetros
+        $this->validate($request, [
+            'limit' => 'sometimes|numeric',
+            'page' => 'sometimes|numeric'
+        ]);
+
+        $limit = ($request->input('limit') !== null) ? $request->input('limit') : 20;
+        $page = ($request->input('page') !== null) ? $request->input('page') : 0;
+
         $user = User::findOrFail($id);
-        return $user->images;
+        return $user->images()->offset($limit*$page)
+                            ->limit($limit)
+                            ->get();
     }
 }

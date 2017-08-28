@@ -36,7 +36,8 @@ img{
     bottom: 0;
     left: 300px;
     overflow-y: auto;
-    overflow-x: hidden
+    overflow-x: hidden;
+    padding-left: 3%;
 }
 
 .edit{

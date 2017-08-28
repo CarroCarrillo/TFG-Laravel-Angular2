@@ -33,7 +33,7 @@
         </div>
     </ng-container>
 </div>
-<div class="content"> 
+<div class="content" (scroll)="onScroll($event)"> 
     <ng-container *ngIf="_images">
         <list [images]="_images"></list>
     </ng-container>

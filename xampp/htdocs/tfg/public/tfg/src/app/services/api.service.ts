@@ -224,8 +224,8 @@ export class ApiService {
         });
     }
 
-    getUserImages(id: number): Promise<Image[]>{
-        return this.apiCall('GET', 'user/' + id + '/images')
+    getUserImages(id: number, args?: Object): Promise<Image[]>{
+        return this.apiCall('GET', 'user/' + id + '/images', args)
         .then(res => {
             return res.json() as Image[];
         }).catch(error => {

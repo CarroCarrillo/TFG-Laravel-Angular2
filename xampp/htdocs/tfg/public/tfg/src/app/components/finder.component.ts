@@ -41,6 +41,7 @@ export class FinderComponent implements OnInit {
   private _fields: Array<string>;
   private _types: Array<string>;
   private _boolFields: Array<boolean>;
+  private _loading: boolean;
 
   private _activatedRoute: ActivatedRoute;
   private _api: ApiService;
@@ -51,6 +52,7 @@ export class FinderComponent implements OnInit {
     this._imagesState = "active";
     this._usersState = "active";
     this._boolFields= new Array<boolean>(21);
+    this._loading = false;
    }
 
   ngOnInit() {
@@ -66,6 +68,7 @@ export class FinderComponent implements OnInit {
         this._hits = [];
         this._query = decodeURI(queryParams['q']);
         if(queryParams['q']) {
+          this._loading = true;
           this._api.find({ q: queryParams['q'] }).then(result => {
             if(result) {
               if(result.hits.hits.length > 0) {
@@ -75,6 +78,7 @@ export class FinderComponent implements OnInit {
                 this._scroll = null;
                 this._end = true;
               }
+              this._loading = false;
             }
           });
         }
@@ -112,6 +116,7 @@ export class FinderComponent implements OnInit {
       if(this._query) {
         this._end = false;
         this._hits = [];
+        this._loading = true;
         this._api.find({ q: this._query, fields: this._fields, index: this._types.join() }).then(result => {
           if(result) {
             if(result.hits.hits.length > 0) {
@@ -121,6 +126,7 @@ export class FinderComponent implements OnInit {
               this._scroll = null;
               this._end = true;
             }
+            this._loading = false;
           }
         });
       }
@@ -128,6 +134,7 @@ export class FinderComponent implements OnInit {
     else{
       this._end = false;
         this._hits = [];
+        this._loading = true;
         this._api.find({ q: this._query, index: this._types.join() }).then(result => {
           if(result) {
             if(result.hits.hits.length > 0) {
@@ -137,6 +144,7 @@ export class FinderComponent implements OnInit {
               this._scroll = null;
               this._end = true;
             }
+            this._loading = false;
           }
         });
       }
