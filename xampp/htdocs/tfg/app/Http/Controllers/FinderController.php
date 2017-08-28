@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Traits\UseElasticsearch;
 use App\Image;
-use Log;
+
 class FinderController extends Controller
 {
     use UseElasticsearch;
@@ -74,8 +74,6 @@ class FinderController extends Controller
       {
         $fields = $request->input('fields');
       }
-
-      Log::info($fields);
 
       //Definimos el cuerpo de la búsqueda
       $params['body'] = [
