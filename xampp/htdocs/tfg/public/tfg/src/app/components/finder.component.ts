@@ -56,7 +56,7 @@ export class FinderComponent implements OnInit {
    }
 
   ngOnInit() {
-      this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "date", "type", "format", "identifier", "name", "surname", "username", "email"];
+      this._fields = ["title", "subject", "description", "source", "language", "relation", "coverage", "creator", "contributor", "publisher", "rights", "type", "format", "identifier", "name", "surname", "username", "email"];
       this._types = ["images", "users"];
 
       for(let i = 0; i < this._boolFields.length; i++){
@@ -111,7 +111,7 @@ export class FinderComponent implements OnInit {
 
   onFilterChange()
   {
-    if(this._fields.length < 19){
+    if(this._fields.length < 18){
 
       if(this._query) {
         this._end = false;
